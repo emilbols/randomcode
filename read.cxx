@@ -22,8 +22,11 @@ void read(){
     //       TFile *ntfile = new TFile("WrongCharmTag.root","READ");
   //            TFile *ntfile = new TFile("FixedCharmandipcut4p0.root","READ");
   //     TFile *ntfile = new TFile("FixedEverythingIpCutat10p0.root","READ");
-  //  TFile *ntfile = new TFile("PRProduced.root","READ");
-  TFile *ntfile = new TFile("JetTree_mc.root","READ");
+  //    TFile *ntfile = new TFile("PRProduced.root","READ");
+  //    TFile *ntfile = new TFile("Training10Xpart2_mc.root","READ");
+  //  TFile *ntfile = new TFile("JetTree_mc.root","READ");
+  //TFile *ntfile = new TFile("NegativeTag/JetTree_mc.root","READ");
+    TFile *ntfile = new TFile("NegativeTag/After.root","READ");
 
 	  //       TFile *ntfile = new TFile("CutPaIP1p9.root","READ");
 
@@ -109,6 +112,7 @@ void read(){
 	TH1F *h_flightDistance2dVal= new TH1F("flightDistance2dVal","flightDistance2dVal", 20,0,2.5);
 	TH1F *h_flightDistance3dVal= new TH1F("flightDistance3dVal","flightDistance3dVal", 20,0,2.5);
 	TH1F *h_flightDistance2dSig= new TH1F("flightDistance2dSig","flightDistance2dSig", 100,0,10);
+	TH1F *h_NegflightDistance2dSig= new TH1F("NegflightDistance2dSig","NegflightDistance2dSig", 100,0,10);
 	TH1F *h_flightDistance3dSig= new TH1F("flightDistance3dSig","flightDistance3dSig", 100,0,10);
 	TH1F *h_etaRel= new TH1F("etaRel","etaRel", 30,-8,8);
 
@@ -125,6 +129,7 @@ void read(){
 	float TagVarCSV_NegvertexCategory[1000];
 	float TagVarCSV_vertexCategory[1000];
 	float DeepCSVBDisc[1000];
+	float Jet_pt[1000];
 	float DeepCSVBDiscN[1000];
 	float DeepCSVCvsLDisc[1000];
 	float DeepCSVCvsLDiscN[1000];
@@ -144,6 +149,7 @@ void read(){
 	float TagVarCSV_NegflightDistance2dVal[1000] = {};
 	float TagVarCSV_NegflightDistance3dVal[1000] = {};
 	float TagVarCSV_NegflightDistance2dSig[1000] = {};
+	float TagVarCSV_flightDistance2dSig[1000] = {};
 	float TagVarCSV_NegflightDistance3dSig[1000] = {};
 	float TagVarCSV_NegjetNSecondaryVertices[1000] = {};
 	float TagVarCSV_jetNSecondaryVertices[1000] = {};
@@ -160,6 +166,7 @@ void read(){
 	data->SetBranchAddress("TagVarCSV_NegflightDistance2dVal",&TagVarCSV_NegflightDistance2dVal);
 	data->SetBranchAddress("TagVarCSV_NegflightDistance3dVal",&TagVarCSV_NegflightDistance3dVal);
 	data->SetBranchAddress("TagVarCSV_NegflightDistance2dSig",&TagVarCSV_NegflightDistance2dSig);
+	data->SetBranchAddress("TagVarCSV_flightDistance2dSig",&TagVarCSV_flightDistance2dSig);
 	data->SetBranchAddress("TagVarCSV_NegflightDistance3dSig",&TagVarCSV_NegflightDistance3dSig);
        	data->SetBranchAddress("TagVarCSV_vertexEnergyRatio",&TagVarCSV_vertexEnergyRatio);
 
@@ -176,6 +183,8 @@ void read(){
 	data->SetBranchAddress("TagVarCSV_vertexCategory",&TagVarCSV_vertexCategory);
 	data->SetBranchAddress("TagVarCSV_NegvertexCategory",&TagVarCSV_NegvertexCategory);
 	data->SetBranchAddress("Jet_DeepFlavourBDisc",&DeepFlavourBDisc);	
+	data->SetBranchAddress("Jet_pt",&Jet_pt);	
+
 	data->SetBranchAddress("Jet_DeepFlavourBDiscN",&DeepFlavourBDiscN);
 	data->SetBranchAddress("Jet_DeepCSVBDisc",&DeepCSVBDisc);	
 	data->SetBranchAddress("Jet_DeepCSVBDiscN",&DeepCSVBDiscN);
@@ -202,6 +211,9 @@ void read(){
 	for (Int_t i=0;i<nentries;i++) {
 		data->GetEntry(i);
 		for(int n=0; n<nJet; n++){
+		  if(Jet_pt[n] < 30.0){
+		    continue;
+		  }
 		  b1->Fill(TagVarCSV_trackSip2dValAboveCharm[n]);
 		  b2->Fill(TagVarCSV_NegtrackSip2dValAboveCharm[n]);
 		  b3->Fill(TagVarCSV_trackSip3dValAboveCharm[n]);
@@ -216,8 +228,6 @@ void read(){
 		  h_vertexNTracks->Fill(TagVarCSV_NegvertexNTracks[n]);
 		  h_flightDistance2dVal->Fill(TagVarCSV_NegflightDistance2dVal[n]);
 		  h_flightDistance3dVal->Fill(TagVarCSV_NegflightDistance3dVal[n]);
-		  h_flightDistance2dSig->Fill(TagVarCSV_NegflightDistance2dSig[n]);
-		  h_flightDistance3dSig->Fill(TagVarCSV_NegflightDistance3dSig[n]);
 		  for(int l = Jet_NegnFirstTrkEtaRelTagVarCSV[n]; l < Jet_NegnLastTrkEtaRelTagVarCSV[n]; l++){
 			h_etaRel->Fill(TagVarCSV_NegtrackEtaRel[l]);
 		  }
@@ -231,6 +241,8 @@ void read(){
 		    h_NegvertexJetDeltaR->Fill(TagVarCSV_NegvertexJetDeltaR[n]);
 		    h_NegjetNSecondaryVertices->Fill(TagVarCSV_NegjetNSecondaryVertices[n]);
 		    h_jetNSecondaryVertices->Fill(TagVarCSV_jetNSecondaryVertices[n]);
+		    h_NegflightDistance2dSig->Fill(TagVarCSV_NegflightDistance2dSig[n]);
+		    h_flightDistance2dSig->Fill(TagVarCSV_flightDistance2dSig[n]);
 		    h_lightdisc->Fill(DeepFlavourBDisc[n]);
 		    h16->Fill(DeepCSVBDisc[n]);
 		    h19->Fill(-DeepCSVBDiscN[n]);
@@ -311,6 +323,7 @@ void read(){
 	int bin6 = h17->GetXaxis()->FindBin(0.6);
 	int bin5 = h20->GetXaxis()->FindBin(-0.6);
 
+	
 	TCanvas *cd9 = new TCanvas("cd9","cd9",10,10,1300,800);
 	b5->Draw();
 	b5->SetTitle("Full Tagger: 2d IP Sig of first track above charm mass");
@@ -354,7 +367,7 @@ void read(){
 	hh21->SetFillColor(kGreen);
 	TCanvas *bd = new TCanvas("bd","bd",10,10,1300,800);
 	
-   	THStack *hs3 = new THStack("hs3","DeepCSV");
+   	THStack *hs3 = new THStack("hs3","DeepCSV Negative Tagger");
 	hs3->Add(h16);
 	hs3->Add(h17);
 	hs3->Add(h18);
@@ -362,6 +375,7 @@ void read(){
 	hs3->Add(h20);
 	hs3->Add(h21);
 	hs3->Draw();
+	hs3->GetYaxis()->SetRangeUser(1,50000);
 	bd->SetLogy();
 	bd->Update();
 
@@ -377,10 +391,19 @@ void read(){
 	hhs3->Draw();
 	bbd->SetLogy();
 	bbd->Update();
-
+	
+	TCanvas *df_canv = new TCanvas("df_canv","df_canv",10,10,1300,800);
+	THStack *df = new THStack("df","New DeepFlavour training");
+	df->Add(h_lightdisc);
+	df->Add(h3);
+	df->Add(h5);
+	df->Draw("hist");
+	df->GetXaxis()->SetRangeUser(0.0,1.0);  
+	df_canv->Update();
+	
 	TCanvas *cd = new TCanvas("cd","cd",10,10,1300,800);
 	
-   	THStack *hs = new THStack("hs","DeepFlavour");
+   	THStack *hs = new THStack("hs","DeepFlavour Negative Tagger");
 	hs->Add(h_lightdisc);
 	hs->Add(h_lightdiscN);
 	hs->Add(h3);
@@ -388,7 +411,7 @@ void read(){
 	hs->Add(h5);
 	hs->Add(h6);
 	hs->Draw("hist");
-	hs->GetYaxis()->SetRangeUser(1,10000);
+	hs->GetYaxis()->SetRangeUser(1,85000);
 	cd->SetLogy();
 	cd->Update();
 	TCanvas *cd1 = new TCanvas("cd1","cd1",10,10,1300,800);
@@ -501,6 +524,7 @@ void read(){
 	TCanvas *cd26 = new TCanvas("cd26", "flightDistance2dSigOffvsOn",50,50,1000,800);
 	h_flightDistance2dSig->Draw("hist");
 	h_flightDistance2dSig->SetFillColor(2);
+	h_NegflightDistance2dSig->Draw("E0 same");
 	cd26->SetLogy();
 	cd26->Update();
 	TCanvas *cd27 = new TCanvas("cd27", "Jet N Secondary vertices",50,50,1000,800);
