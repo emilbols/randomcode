@@ -1,0 +1,33 @@
+TrainData_deepFlavour_FT_lrpatt2
+
+
+
+'Cpfcan_drminsv', 'Cpfcan_BtagPf_trackPParRatio', 'Cpfcan_BtagPf_trackDeltaR', 'Cpfcan_quality', 'Cpfcan_ptrel' , 'Cpfcan_chi2', 'Cpfcan_BtagPf_trackPPar',
+
+ 'Npfcan_puppiw', 'Npfcan_drminsv','Npfcan_HadFrac', 'Npfcan_deltaR',
+
+ 'TagVarCSV_trackSumJetDeltaR', 'TagVarCSV_trackSip3dValAboveCharm' 'TagVarCSV_trackSumJetEtRatio', 'TagVarCSV_jetNTracksEtaRel',  'TagVarCSV_vertexCategory' 
+
+'jet_eta',
+
+'nsv', 'sv_d3d',  'sv_deltaR', 'sv_normchi2',   'sv_chi2',
+
+
+'Cpfcan_BtagPf_trackPtRel', 'Npfcan_ptrel', 'sv_enratio', 'sv_dxy', 'TagVarCSV_jetNSelectedTracks', 'Cpfcan_BtagPf_trackEtaRel', 'nNpfcand', 'Cpfcan_BtagPf_trackSip3dVal', 'Cpfcan_BtagPf_trackJetDistVal', 'TagVarCSV_trackSip2dValAboveCharm', 'Cpfcan_BtagPf_trackSip2dVal', 'npv', 'Cpfcan_puppiw', 'TagVarCSV_trackSip3dSigAboveCharm', 'nCpfcand', 'Cpfcan_BtagPf_trackSip2dSig', 'sv_ntracks', 'TagVarCSV_trackSip2dSigAboveCharm', 'Npfcan_isGamma', 'jet_pt', 'sv_dxysig', 'Cpfcan_VTX_ass', 'sv_mass', 'sv_pt', 'Cpfcan_BtagPf_trackSip3dSig', 'sv_d3dsig', 'sv_costhetasvpv'
+
+
+
+
+
+TrainData_deepFlavour_FT_lrpatt3
+
+
+
+
+
+
+'TagVarCSV_trackSumJetDeltaR', 'Cpfcan_drminsv', 'Cpfcan_BtagPf_trackPParRatio',  'Cpfcan_BtagPf_trackDeltaR', 'TagVarCSV_trackSumJetEtRatio', 'TagVarCSV_trackSip3dValAboveCharm',  'sv_deltaR', 'Cpfcan_quality', 'sv_d3d', 'TagVarCSV_jetNTracksEtaRel', 'Npfcan_drminsv', 'sv_enratio', 'TagVarCSV_vertexCategory', 'Npfcan_puppiw','sv_normchi2', 'Cpfcan_ptrel',
+
+
+'nsv', 'jet_eta', 'sv_chi2', 'Cpfcan_chi2', 'Cpfcan_BtagPf_trackPtRel', 'sv_dxy', 'Npfcan_deltaR', 'TagVarCSV_trackSip2dValAboveCharm', 'Cpfcan_BtagPf_trackEtaRel', 'Npfcan_ptrel', 'Cpfcan_BtagPf_trackSip2dVal', 'Npfcan_HadFrac', 'TagVarCSV_jetNSelectedTracks', 'Cpfcan_BtagPf_trackPPar', 'Cpfcan_BtagPf_trackJetDistVal', 'TagVarCSV_trackSip3dSigAboveCharm', 'Cpfcan_BtagPf_trackSip3dVal', 'TagVarCSV_trackSip2dSigAboveCharm', 'sv_ntracks', 'sv_pt', 'sv_dxysig', 'sv_mass', 'Cpfcan_puppiw', 'npv', 'nNpfcand', 'nCpfcand', 'Cpfcan_BtagPf_trackSip2dSig', 'sv_d3dsig', 'sv_costhetasvpv', 'Npfcan_isGamma', 'Cpfcan_BtagPf_trackSip3dSig', 'jet_pt', 'Cpfcan_VTX_ass']
+

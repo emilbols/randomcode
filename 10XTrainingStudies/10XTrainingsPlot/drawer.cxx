@@ -77,19 +77,19 @@ void drawer(){
   extraText  = "t#bar{t} events";  // default extra text is "Preliminary"
   //lumi_sqrtS = "#sqrt{s} = 13 TeV";
   lumi_sqrtS = "41.9 fb^{-1} (13 TeV, 2017)";
-  const int nr = 38;
+  const int nr = 39;
   TFile * files[nr] = {};
   files[0] = TFile::Open("DeepFlavour10Xon10X.root"); // DFSkimEpoch30.root
   files[1] = TFile::Open("DeepFlavour10Xon94X.root"); //DeepCSV_94X_TTBar_30GeV.root DeepFlavour210Xon10XTTBar DeepFlavour10Xon94X.root
   files[2] = TFile::Open("DeepFlavour94Xon94X.root"); // DFSkimEpoch30.root DFRNN_lrpSkim.root
-  files[3] = TFile::Open("DF_Sorted_stoppedEpoch44_ttBarHad.root"); //DFRNN_lrpSkimV2_cuttracks_v2_ttbarhad_30.root DF_frac0p02_Skim_Final_ttBarHad_30.root DFRNN_lrpSkimV2_cuttracks_v2_ttbarhad_30.root DFRNN_lrpSkimV2_cuttracks_more_ttBar_30Pt.root DFRNN_lrpSkimV2.root DFRNN_lrpSkimV2_cuttracks_more_ttBar_30Pt.root DFRNN_lrpSkimV2_cuttracks_TTBar_10X_30Pt.root NewMiniAODv2.root DeepFlavour94Xon10X.root DFRNN_lrpSkim.root DF_frac0p02_Skim_Final_ttBarHad_30.root
-  files[4] = TFile::Open("DFRNN_lrpSkimV2_cuttracks_v2_TTBarLept94X_30.root"); //DeepFlavour_only_reco.root DeepFlavour_reco.root, DeepFlavour_only_reco.root 
+  files[3] = TFile::Open("DF_Skim_NoPupAss/DF_NoAss_TTBarHad_10X_30GeV.root"); // /home/emil/NNStudies/ROCS/multiROC/NewDFSkim/DF2_Skim_Final_ttBarHad_30.root pruned/DF_final_skim_ttBar30GeV.root DFRNN_lrpSkimV2_cuttracks_v2_ttbarhad_30.root DF_frac0p02_Skim_Final_ttBarHad_30.root DFRNN_lrpSkimV2_cuttracks_v2_ttbarhad_30.root DFRNN_lrpSkimV2_cuttracks_more_ttBar_30Pt.root DFRNN_lrpSkimV2.root DFRNN_lrpSkimV2_cuttracks_more_ttBar_30Pt.root DFRNN_lrpSkimV2_cuttracks_TTBar_10X_30Pt.root NewMiniAODv2.root DeepFlavour94Xon10X.root DFRNN_lrpSkim.root DF_frac0p02_Skim_Final_ttBarHad_30.root
+  files[4] = TFile::Open("DF_Skim_NoPupAss/DF_NoAss_TTBarLept_10X_30GeV.root"); //pruned2/DF2_final_skim_TTBar_lep_30GeV.root DFRNN_lrpSkimV2_cuttracks_v2_TTBarLept94X_30.root DeepFlavour_only_reco.root DeepFlavour_reco.root, DeepFlavour_only_reco.root 
   files[5] = TFile::Open("DeepFlavour10Xon94XLept.root"); // DeepFlavour10Xon94XLept.root
-  files[6] = TFile::Open("DeepFlavour10XTTBarNoAss30GeV.root"); //DeepFlavour10XNoPuppi.root
-  files[7] = TFile::Open("DeepFlavour10XQCD.root");
-  files[8] = TFile::Open("DFRNN_lrpSkimV2_cuttracks_v2_QCD120to170_30.root"); // DFRNN_lrpSkimV2_cuttracks_v2_QCD120to170_30.root
-  files[9] = TFile::Open("DeepFlavour10Xon10XQCD500Pt.root");
-  files[10] = TFile::Open("DFRNN_lrpSkimV2_cuttracks_v2_QCD3200toInf_500.root"); //DFRNN_lrpSkimV2_cuttracks_more_QCD_500Pt.root DFRNN_lrpSkimV2_QCD_500Pt.root DFRNN_lrpSkimV2_cuttracks_QCD_10X_500Pt.pdf DeepFlavour94Xon10XQCD360Pt.root DFRNN_lrpSkimV2_cuttracks_QCD_10X_500Pt.root DFRNN_lrpSkimV2_cuttracks_more_QCD_500Pt.root
+  files[6] = TFile::Open("/home/emil/NNStudies/ROCS/multiROC/NewDFSkim/DF2_Skim_Final_ttBarHad_30.root"); // pruned/DF_final_skim_ttBar30GeV.root DeepFlavour10XTTBarNoAss30GeV.root DeepFlavour10XNoPuppi.root
+  files[7] = TFile::Open("DeepFlavour10XQCD.root"); // evaluated on 94X 120to170
+  files[8] = TFile::Open("DF_Skim_NoPupAss/DF_NoAss_QCD120to170_94X_30GeV.root"); //this is 10X // pruned2/DF2_final_skim_QCD120to170_30GeV.root DFRNN_lrpSkimV2_cuttracks_v2_QCD120to170_30.root
+  files[9] = TFile::Open("DF_Original_QCD3200toInf_94X_500GeV.root");
+  files[10] = TFile::Open("DF_Skim_NoPupAss/DF_NoAss_QCD3200toInf_94X_500GeV.root"); //pruned2/DF2_final_skim_QCD3200toInf_94X_500GeV.root DFRNN_lrpSkimV2_cuttracks_v2_QCD3200toInf_500.root DFRNN_lrpSkimV2_cuttracks_more_QCD_500Pt.root DFRNN_lrpSkimV2_QCD_500Pt.root DFRNN_lrpSkimV2_cuttracks_QCD_10X_500Pt.pdf DeepFlavour94Xon10XQCD360Pt.root DFRNN_lrpSkimV2_cuttracks_QCD_10X_500Pt.root DFRNN_lrpSkimV2_cuttracks_more_QCD_500Pt.root
 //DeepFlavour10XQCDHighPT
   //DeepFlavour94XQCDHighPT.root
   files[11] = TFile::Open("DeepCSV10XTestTTBar.root");
@@ -111,18 +111,19 @@ void drawer(){
   files[24] = TFile::Open("DeepCSV_94X_TTBar_90GeV.root"); // DeepCSV_94X_TTBar_90GeV.root -- DeepCSV94XTTBar90GeV.root
   files[25] = TFile::Open("DeepFlavour10XTTbar90GeV.root");
   files[26] = TFile::Open("DeepCSV8XTT200GeV.root");
-  files[27] = TFile::Open("DFRNN_lrpSkimV2_cuttracks_v2_ttbarhad_200.root"); //DFRNN_lrpSkimV2_cuttracks_TTBar_10X_200Pt.root  DFRNN_lrpSkimV2_200Pt.root DeepCSV94XTTBar200GeV.root DFRNN_lrpSkimV2_cuttracks_more_ttBar_200Pt.root
+  files[27] = TFile::Open("DF_Skim_NoPupAss/DF_NoAss_TTBarHad_10X_200GeV.root"); //pruned2/DF2_final_skim_TTBarHad_200GeV.root DFRNN_lrpSkimV2_cuttracks_TTBar_10X_200Pt.root  DFRNN_lrpSkimV2_200Pt.root DeepCSV94XTTBar200GeV.root DFRNN_lrpSkimV2_cuttracks_more_ttBar_200Pt.root
   files[28] = TFile::Open("DeepFlavour10XTTbar200GeV.root ");
   files[29] = TFile::Open("/home/emil/NNStudies/TestOfDF94X/Test94XRoc.root "); ///home/emil/NNStudies/TestOfDF94X/Test94XRoc.root  
   files[30] = TFile::Open("DF_OLDCMSSW.root ");
   files[31] = TFile::Open("DF_Fat_epoch10_ttBarHad.root"); //DFNoRNN.root
   files[32] = TFile::Open("DFOriginal_TTBarCTag_30pt.root");
-  files[33] = TFile::Open("DFLRPSkimV2_cuttracksv2_TTBarCTag_30pt.root"); // DFRNN_lrpSkimV2_TTBarCTag_30pt.root
+  files[33] = TFile::Open("DF_Skim_NoPupAss/DF_NoAss_TTBarHad_CTag_30GeV.root"); //pruned2/DF2_final_skim_TTBarCTag_30GeV.root DFRNN_lrpSkimV2_TTBarCTag_30pt.root
   files[34] = TFile::Open("DFOriginal_TTBarUDSTag_30pt.root");
-  files[35] = TFile::Open("DFLRPSkimV2_cuttracksv2_TTBarUDSTag_30pt.root"); // DF_lrpskim_TTBarUDSTag_30pt.root
+  files[35] = TFile::Open("DF_Skim_NoPupAss/DF_NoAss_TTBarHad_UDSTag_30GeV.root"); //pruned2/DF2_final_skim_TTBarUDSTag_30GeV.root DF_lrpskim_TTBarUDSTag_30pt.root
   files[36] = TFile::Open("DF_org_ttBarHad_300GeV.root");
   files[37] = TFile::Open("DeepCSV_94X_TTBar_300GeV.root");
-  
+  files[38] = TFile::Open("DF_10X_on_Phase0.root");
+
   TFile * SF_DF_file = TFile::Open("SF_deepFlavour.root");
   TGraphAsymmErrors * SF_DF_plot_lvsb = (TGraphAsymmErrors*)SF_DF_file->Get("roccurve_0");
   TGraphAsymmErrors * SF_DF_plot_cvsb = (TGraphAsymmErrors*)SF_DF_file->Get("roccurve_1");
@@ -303,10 +304,14 @@ void drawer(){
   //graphcvsb[30]->Draw("same");
   graphlvsb[30]->SetLineColor(kBlack);
   graphcvsb[30]->SetLineColor(kBlack);
+  graphlvsb[38]->SetLineColor(kBlack);
+  graphcvsb[38]->SetLineColor(kBlack);
   graphcvsb[30]->SetLineStyle(9);
   graphlvsb[4]->SetLineWidth(2); 
   graphcvsb[4]->SetLineWidth(2); 
   graphlvsb[5]->SetLineWidth(2);
+ graphcvsb[38]->SetLineWidth(2); 	
+  graphlvsb[38]->SetLineWidth(2);
   graphcvsb[5]->SetLineWidth(2);
   graphlvsb[29]->SetLineWidth(2);
   graphcvsb[29]->SetLineWidth(2);
@@ -324,8 +329,11 @@ void drawer(){
   graphcvsb[6]->Draw("same");
 
   auto legend2 = new TLegend(0.28,0.65,0.48,0.8);
-  legend2->AddEntry(graphcvsb[0],"10X training with puppi weights","l");
-  legend2->AddEntry(graphcvsb[6],"10X training without puppi weights","l");
+  //legend2->AddEntry(graphcvsb[0],"10X training with puppi weights","l");
+  //legend2->AddEntry(graphcvsb[6],"10X training without puppi weights","l");
+  legend2->AddEntry(graphcvsb[0],"10X training TTbar had > 30GeV","l");
+  legend2->AddEntry(graphcvsb[6],"DeepFlavour skim TTBar had > 30GeV","l");
+ 
   legend2->Draw(); 
 
   TCanvas *c4 = new TCanvas("c4", "ROCS",50,50,1500,800);
@@ -335,6 +343,8 @@ void drawer(){
   graphcvsb[7]->Draw("same"); 
   graphlvsb[8]->Draw("same");
   graphcvsb[8]->Draw("same");
+  graphlvsb[38]->Draw("same");
+  graphcvsb[38]->Draw("same");
 
   auto legend3 = new TLegend(0.28,0.65,0.48,0.8);
   legend3->AddEntry(graphcvsb[7],"10X training on 94X QCD 120 to 170 GeV","l");
@@ -344,7 +354,7 @@ void drawer(){
   TCanvas *c5 = new TCanvas("c5", "ROCS",50,50,1500,800);
   c5->SetGrid();
   graphlvsb[9]->Draw();
-  graphlvsb[9]->SetTitle("Comparison on 10X QCD pt > 500GeV");
+  graphlvsb[9]->SetTitle("Comparison on 94X QCD pt > 500GeV");
   graphcvsb[9]->Draw("same"); 
   graphlvsb[10]->Draw("same");
   graphcvsb[10]->Draw("same"); 
@@ -352,8 +362,8 @@ void drawer(){
  // graphcvsb[21]->Draw("same");
 
   auto legend4 = new TLegend(0.28,0.65,0.48,0.8);
-  legend4->AddEntry(graphcvsb[9],"10X training on 10X QCD pt > 500GeV","l");
-  legend4->AddEntry(graphcvsb[10],"10X training skimmed on 10X QCD pt > 500GeV","l");
+  legend4->AddEntry(graphcvsb[9],"10X training on 94X QCD pt > 500GeV","l");
+  legend4->AddEntry(graphcvsb[10],"10X training skimmed on 94X QCD pt > 500GeV","l");
   //legend4->AddEntry(graphcvsb[21],"94X with no ttbar leptonic training on 10X QCD pt > 360GeV","l");
   legend4->Draw();  
 

@@ -13,7 +13,7 @@ from ROOT import TCanvas, TGraph
 from ROOT import gROOT
 from math import sin
 from array import array
-listbranch = ['Jet_pt','Jet_eta','Jet_DeepCSVBDisc','Jet_hadronFlavour']
+listbranch = ['Jet_pt','Jet_eta','Jet_DeepFlavourBDisc','Jet_hadronFlavour']
 
 
 def draw_roc_mean(df, df2, label, color, draw_unc=False, ls='-', draw_auc=True):
@@ -92,14 +92,14 @@ def spit_out_roc(df, label, color, draw_unc=False, ls='-', draw_auc=True, flavou
     tprs = pd.DataFrame()
     scores = []
     if flavour:
-        cs = ( (df['Jet_hadronFlavour'] != 4) & (df['Jet_hadronFlavour'] > 0) & (df['Jet_pt'] > 90) & (df['Jet_eta'] < 2.4 ) & (df['Jet_eta'] > (-2.4) ) & (df['Jet_DeepCSVBDisc'] > 0) )
+        cs = ( (df['Jet_hadronFlavour'] != 4) & (df['Jet_pt'] > 30) & (df['Jet_eta'] < 2.4 ) & (df['Jet_eta'] > (-2.4) )  )
     else:
-        cs = ( (df['Jet_hadronFlavour'] != 1) & (df['Jet_hadronFlavour'] > 0) & (df['Jet_hadronFlavour'] != 2) & (df['Jet_eta'] < 2.4 ) & (df['Jet_eta'] > (-2.4) ) & (df['Jet_hadronFlavour'] != 3) & (df['Jet_hadronFlavour'] != 21) & (df['Jet_pt'] > 90) & (df['Jet_DeepCSVBDisc'] > 0) )
+        cs = ( (df['Jet_hadronFlavour'] != 0) & (df['Jet_eta'] < 2.4 ) & (df['Jet_eta'] > (-2.4) ) & (df['Jet_pt'] > 30)  )
     df = df[cs]
     blab = (df['Jet_hadronFlavour'] == 5)*1
-    tmp_fpr, tmp_tpr, _ = roc_curve(blab, df['Jet_DeepCSVBDisc'])
+    tmp_fpr, tmp_tpr, _ = roc_curve(blab, df['Jet_DeepFlavourBDisc'])
     scores.append(
-        roc_auc_score(blab, df['Jet_DeepCSVBDisc'])
+        roc_auc_score(blab, df['Jet_DeepFlavourBDisc'])
     )
     coords = pd.DataFrame()
     coords['fpr'] = tmp_fpr
@@ -117,7 +117,7 @@ pred = []
 
 
 rfile2 = ROOT.TChain("t2")
-rfile2.Add('../UnpackedBtagAna.root')
+rfile2.Add('PrunedDFNoPuppi.root')
 
 truth = root_numpy.tree2array(rfile2, branches = listbranch)
 print truth.shape
@@ -127,7 +127,7 @@ plt.figure(figsize=(18,10))
 x1, y1 = spit_out_roc(truth, '', 'blue', draw_auc=False, flavour = True)
 x2, y2 = spit_out_roc(truth, '', 'blue', draw_auc=False, flavour = False)
 
-f = ROOT.TFile("OldMiniAOD.root", "recreate")
+f = ROOT.TFile("DFFull_comparewithpup_ROC.root", "recreate")
 gr1 = TGraph( 100, x1, y1 )
 gr1.SetName("roccurve_0")
 gr2 = TGraph( 100, x2, y2 )

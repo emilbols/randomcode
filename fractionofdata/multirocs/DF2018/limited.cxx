@@ -56,8 +56,8 @@ void limited(){
 
   TFile * files[5] = {};
   
-  files[0] = TFile::Open("DF_frac0p02_Skim_Final_ttBarHad_30.root");  
-  files[1] = TFile::Open("DF_frac0p30_Skim_Final_ttBarHad_30.root");  
+  files[0] = TFile::Open("DF_frac0p02_ttBarHad_30.root");  
+  files[1] = TFile::Open("DF_frac0p30_ttBarHad_30.root");  
   files[2] = TFile::Open("DeepFlavour10Xon94X.root"); //DF1_Skim_Final_ttBarHad_30.root
   files[3] = TFile::Open("DeepFlavour10Xon94X.root");	
   TGraph * graphlvsb[4] = {};
