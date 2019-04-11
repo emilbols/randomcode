@@ -77,12 +77,13 @@ void drawer(){
   extraText  = "t#bar{t} events";  // default extra text is "Preliminary"
   //lumi_sqrtS = "#sqrt{s} = 13 TeV";
   lumi_sqrtS = "41.9 fb^{-1} (13 TeV, 2017)";
-  const int nr = 39;
+  const int nr = 40;
   TFile * files[nr] = {};
   files[0] = TFile::Open("DeepFlavour10Xon10X.root"); // DFSkimEpoch30.root
-  files[1] = TFile::Open("DeepFlavour10Xon94X.root"); //DeepCSV_94X_TTBar_30GeV.root DeepFlavour210Xon10XTTBar DeepFlavour10Xon94X.root
+  //files[0] = TFile::Open("Underligt_1.root"); // DFSkimEpoch30.root
+  files[1] = TFile::Open("DeepFlavour10Xon94X.root"); //DeepFlavour10Xon94X.root PermInv26EpochsAttempt1.root DeepCSV_94X_TTBar_30GeV.root DeepFlavour210Xon10XTTBar DeepFlavour10Xon94X.root
   files[2] = TFile::Open("DeepFlavour94Xon94X.root"); // DFSkimEpoch30.root DFRNN_lrpSkim.root
-  files[3] = TFile::Open("DF_Skim_NoPupAss/DF_NoAss_TTBarHad_10X_30GeV.root"); // /home/emil/NNStudies/ROCS/multiROC/NewDFSkim/DF2_Skim_Final_ttBarHad_30.root pruned/DF_final_skim_ttBar30GeV.root DFRNN_lrpSkimV2_cuttracks_v2_ttbarhad_30.root DF_frac0p02_Skim_Final_ttBarHad_30.root DFRNN_lrpSkimV2_cuttracks_v2_ttbarhad_30.root DFRNN_lrpSkimV2_cuttracks_more_ttBar_30Pt.root DFRNN_lrpSkimV2.root DFRNN_lrpSkimV2_cuttracks_more_ttBar_30Pt.root DFRNN_lrpSkimV2_cuttracks_TTBar_10X_30Pt.root NewMiniAODv2.root DeepFlavour94Xon10X.root DFRNN_lrpSkim.root DF_frac0p02_Skim_Final_ttBarHad_30.root
+  files[3] = TFile::Open("Underligt.root"); //DF_Skim_NoPupAss/DF_NoAss_TTBarHad_10X_30GeV.root /home/emil/NNStudies/ROCS/multiROC/NewDFSkim/DF2_Skim_Final_ttBarHad_30.root pruned/DF_final_skim_ttBar30GeV.root DFRNN_lrpSkimV2_cuttracks_v2_ttbarhad_30.root DF_frac0p02_Skim_Final_ttBarHad_30.root DFRNN_lrpSkimV2_cuttracks_v2_ttbarhad_30.root DFRNN_lrpSkimV2_cuttracks_more_ttBar_30Pt.root DFRNN_lrpSkimV2.root DFRNN_lrpSkimV2_cuttracks_more_ttBar_30Pt.root DFRNN_lrpSkimV2_cuttracks_TTBar_10X_30Pt.root NewMiniAODv2.root DeepFlavour94Xon10X.root DFRNN_lrpSkim.root DF_frac0p02_Skim_Final_ttBarHad_30.root
   files[4] = TFile::Open("DF_Skim_NoPupAss/DF_NoAss_TTBarLept_10X_30GeV.root"); //pruned2/DF2_final_skim_TTBar_lep_30GeV.root DFRNN_lrpSkimV2_cuttracks_v2_TTBarLept94X_30.root DeepFlavour_only_reco.root DeepFlavour_reco.root, DeepFlavour_only_reco.root 
   files[5] = TFile::Open("DeepFlavour10Xon94XLept.root"); // DeepFlavour10Xon94XLept.root
   files[6] = TFile::Open("/home/emil/NNStudies/ROCS/multiROC/NewDFSkim/DF2_Skim_Final_ttBarHad_30.root"); // pruned/DF_final_skim_ttBar30GeV.root DeepFlavour10XTTBarNoAss30GeV.root DeepFlavour10XNoPuppi.root
@@ -115,7 +116,7 @@ void drawer(){
   files[28] = TFile::Open("DeepFlavour10XTTbar200GeV.root ");
   files[29] = TFile::Open("/home/emil/NNStudies/TestOfDF94X/Test94XRoc.root "); ///home/emil/NNStudies/TestOfDF94X/Test94XRoc.root  
   files[30] = TFile::Open("DF_OLDCMSSW.root ");
-  files[31] = TFile::Open("DF_Fat_epoch10_ttBarHad.root"); //DFNoRNN.root
+  files[31] = TFile::Open("DeepCSV_noTrackSelect.root"); //DFNoRNN.root
   files[32] = TFile::Open("DFOriginal_TTBarCTag_30pt.root");
   files[33] = TFile::Open("DF_Skim_NoPupAss/DF_NoAss_TTBarHad_CTag_30GeV.root"); //pruned2/DF2_final_skim_TTBarCTag_30GeV.root DFRNN_lrpSkimV2_TTBarCTag_30pt.root
   files[34] = TFile::Open("DFOriginal_TTBarUDSTag_30pt.root");
@@ -123,8 +124,13 @@ void drawer(){
   files[36] = TFile::Open("DF_org_ttBarHad_300GeV.root");
   files[37] = TFile::Open("DeepCSV_94X_TTBar_300GeV.root");
   files[38] = TFile::Open("DF_10X_on_Phase0.root");
+  files[39] = TFile::Open("Underligt90.root");
+ 
 
+
+  
   TFile * SF_DF_file = TFile::Open("SF_deepFlavour.root");
+  //TFile * SF_DF_file = TFile::Open("automated_SF_DeepFlavour_30GeV.root");
   TGraphAsymmErrors * SF_DF_plot_lvsb = (TGraphAsymmErrors*)SF_DF_file->Get("roccurve_0");
   TGraphAsymmErrors * SF_DF_plot_cvsb = (TGraphAsymmErrors*)SF_DF_file->Get("roccurve_1");
   TGraph * SF_DF_plot_lvsb_no_cor = (TGraph*)SF_DF_file->Get("roccurve_0noCor");
@@ -140,18 +146,26 @@ void drawer(){
   TFile * SF_DF_file_90 = TFile::Open("SF_deepFlavour_90GeV.root");
   TGraphAsymmErrors * SF_DF_plot_lvsb_90 = (TGraphAsymmErrors*)SF_DF_file_90->Get("roccurve_0");
   TGraphAsymmErrors * SF_DF_plot_cvsb_90 = (TGraphAsymmErrors*)SF_DF_file_90->Get("roccurve_1");
+  TGraphAsymmErrors * SF_DF_plot_lvsb_90_no_cor = (TGraphAsymmErrors*)SF_DF_file_90->Get("roccurve_0noCor");
+  TGraphAsymmErrors * SF_DF_plot_cvsb_90_no_cor = (TGraphAsymmErrors*)SF_DF_file_90->Get("roccurve_1noCor");
 
   TFile * SF_DCSV_file_90 = TFile::Open("SF_deepCSV_phase1_90GeV.root");
   TGraphAsymmErrors * SF_DCSV_plot_lvsb_90 = (TGraphAsymmErrors*)SF_DCSV_file_90->Get("roccurve_0");
   TGraphAsymmErrors * SF_DCSV_plot_cvsb_90 = (TGraphAsymmErrors*)SF_DCSV_file_90->Get("roccurve_1");
+  TGraphAsymmErrors * SF_DCSV_plot_lvsb_90_no_cor = (TGraphAsymmErrors*)SF_DCSV_file_90->Get("roccurve_0noCor");
+  TGraphAsymmErrors * SF_DCSV_plot_cvsb_90_no_cor = (TGraphAsymmErrors*)SF_DCSV_file_90->Get("roccurve_1noCor");
 
   TFile * SF_DF_file_300 = TFile::Open("SF_deepFlavour_300GeV.root");
   TGraphAsymmErrors * SF_DF_plot_lvsb_300 = (TGraphAsymmErrors*)SF_DF_file_300->Get("roccurve_0");
   TGraphAsymmErrors * SF_DF_plot_cvsb_300 = (TGraphAsymmErrors*)SF_DF_file_300->Get("roccurve_1");
+  TGraphAsymmErrors * SF_DF_plot_lvsb_300_no_cor = (TGraphAsymmErrors*)SF_DF_file_300->Get("roccurve_0noCor");
+  TGraphAsymmErrors * SF_DF_plot_cvsb_300_no_cor = (TGraphAsymmErrors*)SF_DF_file_300->Get("roccurve_1noCor");
 
   TFile * SF_DCSV_file_300 = TFile::Open("SF_deepCSV_phase1_300GeV.root");
   TGraphAsymmErrors * SF_DCSV_plot_lvsb_300 = (TGraphAsymmErrors*)SF_DCSV_file_300->Get("roccurve_0");
   TGraphAsymmErrors * SF_DCSV_plot_cvsb_300 = (TGraphAsymmErrors*)SF_DCSV_file_300->Get("roccurve_1");
+  TGraphAsymmErrors * SF_DCSV_plot_lvsb_300_no_cor = (TGraphAsymmErrors*)SF_DCSV_file_300->Get("roccurve_0noCor");
+  TGraphAsymmErrors * SF_DCSV_plot_cvsb_300_no_cor = (TGraphAsymmErrors*)SF_DCSV_file_300->Get("roccurve_1noCor");
 
   
 
@@ -164,14 +178,26 @@ void drawer(){
   SF_DF_plot_lvsb->SetMarkerSize(2);
   SF_DF_plot_cvsb->SetMarkerSize(2);
   SF_DF_plot_lvsb_no_cor->SetMarkerStyle(20);
-  SF_DF_plot_cvsb_no_cor->SetMarkerStyle(20);
+  SF_DF_plot_cvsb_no_cor->SetMarkerStyle(24);
   SF_DF_plot_lvsb_no_cor->SetMarkerSize(2);
   SF_DF_plot_cvsb_no_cor->SetMarkerSize(2);
 
   SF_DCSV_plot_lvsb_no_cor->SetMarkerStyle(20);
-  SF_DCSV_plot_cvsb_no_cor->SetMarkerStyle(20);
+  SF_DCSV_plot_cvsb_no_cor->SetMarkerStyle(24);
   SF_DCSV_plot_lvsb_no_cor->SetMarkerSize(2);
   SF_DCSV_plot_cvsb_no_cor->SetMarkerSize(2);
+
+  SF_DF_plot_lvsb_no_cor->SetMarkerColor(kBlue);
+  SF_DF_plot_cvsb_no_cor->SetMarkerColor(kBlue);
+
+  SF_DCSV_plot_lvsb_no_cor->SetMarkerColor(kRed);
+  SF_DCSV_plot_cvsb_no_cor->SetMarkerColor(kRed);
+
+
+  SF_DF_plot_lvsb_no_cor->SetLineColor(kBlue);
+  SF_DF_plot_cvsb_no_cor->SetLineColor(kBlue);
+  SF_DCSV_plot_lvsb_no_cor->SetLineColor(kRed);
+  SF_DCSV_plot_cvsb_no_cor->SetLineColor(kRed);
 
   
   SF_DCSV_plot_lvsb->SetMarkerSize(2);
@@ -205,7 +231,25 @@ void drawer(){
   SF_DCSV_plot_lvsb_90->SetMarkerStyle(22);
   SF_DCSV_plot_cvsb_90->SetMarkerStyle(26);
 
+  SF_DF_plot_lvsb_90_no_cor->SetLineColor(kBlue);
+  SF_DF_plot_cvsb_90_no_cor->SetLineColor(kBlue);
+  SF_DCSV_plot_lvsb_90_no_cor->SetLineColor(kRed);
+  SF_DCSV_plot_cvsb_90_no_cor->SetLineColor(kRed);
+
   
+  SF_DF_plot_lvsb_90_no_cor->SetMarkerStyle(20);
+  SF_DF_plot_cvsb_90_no_cor->SetMarkerStyle(24);
+  SF_DF_plot_lvsb_90_no_cor->SetMarkerSize(2);
+  SF_DF_plot_cvsb_90_no_cor->SetMarkerSize(2);
+
+  SF_DF_plot_lvsb_90_no_cor->SetMarkerColor(kBlue);
+  SF_DF_plot_cvsb_90_no_cor->SetMarkerColor(kBlue);
+  SF_DCSV_plot_lvsb_90_no_cor->SetMarkerStyle(20);
+  SF_DCSV_plot_cvsb_90_no_cor->SetMarkerStyle(24);
+  SF_DCSV_plot_lvsb_90_no_cor->SetMarkerSize(2);
+  SF_DCSV_plot_cvsb_90_no_cor->SetMarkerSize(2);
+  SF_DCSV_plot_lvsb_90_no_cor->SetMarkerColor(kRed);
+  SF_DCSV_plot_cvsb_90_no_cor->SetMarkerColor(kRed);
   
   SF_DF_plot_lvsb_300->SetMarkerColor(kBlue);
   SF_DF_plot_cvsb_300->SetMarkerColor(kBlue);
@@ -226,6 +270,26 @@ void drawer(){
   SF_DCSV_plot_lvsb_300->SetLineColor(kRed);
   SF_DCSV_plot_cvsb_300->SetLineColor(kRed);
 
+
+  SF_DF_plot_lvsb_300_no_cor->SetMarkerStyle(20);
+  SF_DF_plot_cvsb_300_no_cor->SetMarkerStyle(24);
+  SF_DF_plot_lvsb_300_no_cor->SetMarkerSize(2);
+  SF_DF_plot_cvsb_300_no_cor->SetMarkerSize(2);
+  SF_DF_plot_lvsb_300_no_cor->SetMarkerColor(kBlue);
+  SF_DF_plot_cvsb_300_no_cor->SetMarkerColor(kBlue);
+  SF_DF_plot_lvsb_300_no_cor->SetLineColor(kBlue);
+  SF_DF_plot_cvsb_300_no_cor->SetLineColor(kBlue);
+
+  
+  SF_DCSV_plot_lvsb_300_no_cor->SetMarkerStyle(20);
+  SF_DCSV_plot_cvsb_300_no_cor->SetMarkerStyle(24);
+  SF_DCSV_plot_lvsb_300_no_cor->SetMarkerSize(2);
+  SF_DCSV_plot_cvsb_300_no_cor->SetMarkerSize(2);
+  SF_DCSV_plot_lvsb_300_no_cor->SetMarkerColor(kRed);
+  SF_DCSV_plot_cvsb_300_no_cor->SetMarkerColor(kRed);
+  SF_DCSV_plot_lvsb_300_no_cor->SetLineColor(kRed);
+  SF_DCSV_plot_cvsb_300_no_cor->SetLineColor(kRed);
+ 
   
   TGraph * graphlvsb[nr] = {};
   TGraph * graphcvsb[nr] = {};
@@ -433,13 +497,19 @@ void drawer(){
   graphlvsb[12]->GetYaxis()->SetTitle("misid. probability"); 
   graphlvsb[1]->Draw("same");
   graphcvsb[1]->Draw("same");
+
+  graphlvsb[31]->Draw("same");
+  graphcvsb[31]->Draw("same");
+  graphlvsb[31]->SetLineColor(kGreen);
+  graphcvsb[31]->SetLineColor(kGreen);
+
   SF_DF_plot_lvsb->Draw("P same");
   SF_DF_plot_cvsb->Draw("P same");
- // SF_DF_plot_lvsb_no_cor->Draw("P same");
- // SF_DF_plot_cvsb_no_cor->Draw("P same");
+  SF_DF_plot_lvsb_no_cor->Draw("P same");
+  SF_DF_plot_cvsb_no_cor->Draw("P same");
   
- // SF_DCSV_plot_lvsb_no_cor->Draw("P same");
- // SF_DCSV_plot_cvsb_no_cor->Draw("P same");
+  SF_DCSV_plot_lvsb_no_cor->Draw("P same");
+  SF_DCSV_plot_cvsb_no_cor->Draw("P same");
 
   SF_DCSV_plot_lvsb->Draw("P same");
   SF_DCSV_plot_cvsb->Draw("P same");
@@ -458,11 +528,14 @@ void drawer(){
   c9->SetLogy();
   CMS_lumi( c9, 0, 11 );
   CMS_LABEL(0.266,0.812);
+  //CMS_LABEL(0.266,0.826);
   TT_LABEL(0.14,0.772);
   PT_LABEL_30(0.14,0.722);
   auto legend9 = new TLegend(0.1419,0.5384,0.4044,0.6877);
-  legend9->AddEntry(graphlvsb[1],"DeepJet","l");
-  legend9->AddEntry(graphlvsb[12],"DeepCSV","l");
+  //legend9->AddEntry(graphlvsb[1],"DeepJet","lp");
+  //legend9->AddEntry(graphlvsb[12],"DeepCSV","lp");
+  legend9->AddEntry(SF_DF_plot_lvsb_no_cor,"DeepJet","lp");
+  legend9->AddEntry(SF_DCSV_plot_lvsb_no_cor,"DeepCSV","lp");
   legend9->AddEntry(SF_DF_plot_lvsb,"DeepJet with SF applied","lep");
   legend9->AddEntry(SF_DCSV_plot_lvsb,"DeepCSV with SF applied","lep");
 
@@ -481,7 +554,7 @@ void drawer(){
   legend8->AddEntry(graphcvsb[21],"c with SF applied","p");
   legend8->Draw();  
   c9->Update();
-  //c9->SaveAs("SF_30GeV.pdf");
+  c9->SaveAs("SF_30GeVUpdate.pdf");
   TCanvas *c10 = new TCanvas("c10", "ROCS",50,50,1200,900);
   c10->SetGrid();
   graphlvsb[24]->Draw("CA");
@@ -495,8 +568,12 @@ void drawer(){
   graphcvsb[25]->Draw("same");
   SF_DF_plot_lvsb_90->Draw("P same");
   SF_DF_plot_cvsb_90->Draw("P same");
+  SF_DF_plot_lvsb_90_no_cor->Draw("P same");
+  SF_DF_plot_cvsb_90_no_cor->Draw("P same");
   SF_DCSV_plot_lvsb_90->Draw("P same");
   SF_DCSV_plot_cvsb_90->Draw("P same");
+  SF_DCSV_plot_lvsb_90_no_cor->Draw("P same");
+  SF_DCSV_plot_cvsb_90_no_cor->Draw("P same");
   graphcvsb[23]->SetLineWidth(2);
   graphlvsb[23]->SetLineWidth(2);      
   graphlvsb[24]->SetLineColor(kRed);
@@ -513,8 +590,11 @@ void drawer(){
   TT_LABEL(0.14,0.772);
   PT_LABEL_90(0.14,0.722);
   auto legend10 = new TLegend(0.1419,0.5384,0.4044,0.6877);
-  legend10->AddEntry(graphlvsb[25],"DeepJet","l");
-  legend10->AddEntry(graphlvsb[24],"DeepCSV","l");
+  //legend10->AddEntry(graphlvsb[25],"DeepJet","l");
+  //legend10->AddEntry(graphlvsb[24],"DeepCSV","l");
+  legend10->AddEntry(SF_DF_plot_lvsb_90_no_cor,"DeepJet","lp");
+  legend10->AddEntry(SF_DCSV_plot_lvsb_90_no_cor,"DeepCSV","lp");
+  
   legend10->AddEntry(SF_DF_plot_lvsb_90,"DeepJet with SF applied","lep");
   legend10->AddEntry(SF_DCSV_plot_lvsb_90,"DeepCSV with SF applied","lep");
   //  legend10->AddEntry(graphlvsb[23],"DeepCSV phase 0","l");
@@ -565,10 +645,6 @@ void drawer(){
   c12->SetGrid();
   graphlvsb[0]->Draw("CA");
   graphcvsb[0]->Draw("same");
-  graphlvsb[31]->Draw("same");
-  graphcvsb[31]->Draw("same");
-  graphlvsb[31]->SetLineColor(kRed);
-  graphcvsb[31]->SetLineColor(kRed);
   c12->SetLogy();
   auto legend14 = new TLegend(0.1419,0.5384,0.4044,0.6877);
   legend14->AddEntry(graphlvsb[0],"DeepFlavour","l");
@@ -662,11 +738,11 @@ void drawer(){
 
   SF_DF_plot_lvsb_300->Draw("P same");
   SF_DF_plot_cvsb_300->Draw("P same");
- // SF_DF_plot_lvsb_no_cor->Draw("P same");
- // SF_DF_plot_cvsb_no_cor->Draw("P same");
+  SF_DF_plot_lvsb_300_no_cor->Draw("P same");
+  SF_DF_plot_cvsb_300_no_cor->Draw("P same");
   
- // SF_DCSV_plot_lvsb_no_cor->Draw("P same");
- // SF_DCSV_plot_cvsb_no_cor->Draw("P same");
+  SF_DCSV_plot_lvsb_300_no_cor->Draw("P same");
+  SF_DCSV_plot_cvsb_300_no_cor->Draw("P same");
 
   SF_DCSV_plot_lvsb_300->Draw("P same");
   SF_DCSV_plot_cvsb_300->Draw("P same");
@@ -691,5 +767,16 @@ void drawer(){
   legend9->Draw();
   legend8->Draw();  
   //c16->SaveAs("PT_300GeV.pdf");  
+
+  TCanvas *xxx = new TCanvas("xxx", "ROCS",50,50,1500,800);
+  xxx->SetGrid();
+  graphlvsb[25]->Draw();
+  graphlvsb[25]->SetTitle("Comparison on 90GeV perm inv");
+  graphcvsb[25]->Draw("same"); 
+  graphlvsb[39]->Draw("same");
+  graphcvsb[39]->Draw("same");
+  graphlvsb[39]->SetLineColor(kRed);
+  graphcvsb[39]->SetLineColor(kRed);
+
 }
 
