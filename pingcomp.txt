@@ -1,0 +1,17 @@
+Hello,
+
+I need to use the following datasets:
+
+/QCD_Pt_15to30_TuneCP5_13TeV_pythia8/RunIISpring18MiniAOD-100X_upgrade2018_realistic_v10-v1/MINIAODSIM
+/QCD_Pt_50to80_TuneCP5_13TeV_pythia8/RunIISpring18MiniAOD-100X_upgrade2018_realistic_v10-v1/MINIAODSIM
+/QCD_Pt_300to470_TuneCP5_13TeV_pythia8/RunIISpring18MiniAOD-100X_upgrade2018_realistic_v10-v1/MINIAODSIM
+/QCD_Pt_470to600_TuneCP5_13TeV_pythia8/RunIISpring18MiniAOD-100X_upgrade2018_realistic_v10-v1/MINIAODSIM
+/QCD_Pt_2400to3200_TuneCP5_13TeV_pythia8/RunIISpring18MiniAOD-100X_upgrade2018_realistic_v10-v1/MINIAODSIM
+
+I am getting errors due to missing files. It appears that a substantial amount of the files in these datasets are only stored on tape. I tried to initiate a move from tape to disk using crab, and it seems to have worked for the datasets that were completely stored on tape, but it does not appear to be working on the datasets that are only partially stored on tape.
+
+Could you please help me out by moving these datasets to disk? 
+
+Thanks in advance,
+
+Emil 

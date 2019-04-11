@@ -1,0 +1,3 @@
+Re-training of the DeepFlavour model
+
+This PR adds the latest model of the DeepFlavour tagger, which is trained on a more realistic MC sample compared to the current implementation.

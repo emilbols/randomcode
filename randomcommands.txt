@@ -1,0 +1,607 @@
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training1/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim/dataCollection.dc /data/ml/ebols/Prediction_FinalDeepFlavour1_10XTTBar &> DF1Predict.log &
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training2/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim/dataCollection.dc /data/ml/ebols/Prediction_FinalDeepFlavour2_10XTTBar &> DF2Predict.log &
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training3/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim/dataCollection.dc /data/ml/ebols/Prediction_FinalDeepFlavour3_10XTTBar &> DF3Predict.log &
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training4/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim/dataCollection.dc /data/ml/ebols/Prediction_FinalDeepFlavour4_10XTTBar &> DF4Predict.log &
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p02/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim/dataCollection.dc /data/ml/ebols/Prediction_FinalDeepFlavour_frac0p02_10XTTBar &> DFPredict_frac0p02.log &
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p05/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim/dataCollection.dc /data/ml/ebols/Prediction_FinalDeepFlavour_frac0p05_10XTTBar &> DFPredict_frac0p05.log &
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p10/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim/dataCollection.dc /data/ml/ebols/Prediction_FinalDeepFlavour_frac0p10_10XTTBar &> DFPredict_frac0p10.log &
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p20/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim/dataCollection.dc /data/ml/ebols/Prediction_FinalDeepFlavour_frac0p20_10XTTBar &> DFPredict_frac0p20.log &
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p15/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim/dataCollection.dc /data/ml/ebols/Prediction_FinalDeepFlavour_frac0p15_10XTTBar &> DFPredict_frac0p15.log &
+
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p30/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim/dataCollection.dc /data/ml/ebols/Prediction_FinalDeepFlavour_frac0p30_10XTTBar &> DFPredict_frac0p30.log &
+
+
+
+
+
+predict.py /data/ml/ebols/DeepFlavour_skim_noRNNv2/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTHad10X__Skim_NoPuppi/dataCollection.dc /afs/cern.ch/work/e/ebols/private/Prediction_NoRNN_mod_10XTTBarHad &> DFPredictMod.log &
+
+
+predict.py /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTHad10X__Skim_NoPuppi/dataCollection.dc /afs/cern.ch/work/e/ebols/private/Prediction_DFSkim_NoAss_10XTTBarHad &> DFPredictHadNoPuppi.log &
+
+
+predict.py /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBarLept94X_Skim_NoPuppi/dataCollection.dc /afs/cern.ch/work/e/ebols/private/Prediction_DFSkim_NoAss_94XTTBarLept &> DFPredictLeptNoPuppi.log &
+
+predict.py /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuples_QCD3200toInf_Skim_NoPuppi_Full_data/dataCollection.dc /afs/cern.ch/work/e/ebols/private/Prediction_DFSkim_NoAss_94XQCD_3200toInf &> DFPredictQCD94X3200NoPuppi.log &
+
+predict.py /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesQCD94X_120_170_Skim_NoPuppi/dataCollection.dc /afs/cern.ch/work/e/ebols/private/Prediction_DFSkim_NoAss_94XQCD_120_170 &> DFPredictQCD94X120NoPuppi.log &
+
+
+
+
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuplesTTHad10X__Skim_NoPuppi -n 8
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/ntuple_qcd_120_170_Fall17/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuplesQCD94X_120_170_Skim_NoPuppi -n 8
+
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/ntuple_ttbar2L2nu_phase1/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuplesTTBarLept94X_Skim_NoPuppi -n 8
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/ntuple_qcd_3200toInf_Fall17/output/all_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuples_QCD3200toInf_Skim_NoPuppi_Full_data -n 8
+
+
+
+
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/NoTrackSelectionDeepCSV/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuplesTTBarHad10X_DeepCSV_noTrackSelect -n 8
+
+
+TrainData_deepCSV_noTrackSelect
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/train_val_samples.txt -o /afs/cern.ch/work/e/ebols/public/TrainTuples_deepCSV_noTrackSelect -c TrainData_deepCSV_noTrackSelect -n 8
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/filters.txt -o /afs/cern.ch/work/e/ebols/public/TrainTuples_deepCSV_noTrackSelect_remade -c TrainData_deepCSV_noTrackSelect -n 8
+
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/ntuple_qcd_120_170_Fall17/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuplesQCD94X_120_170_Skim_NoPuppi -n 8
+
+
+cmsRun Deep  inputFiles=/store/mc/RunIISpring18MiniAOD/QCD_Pt_30to50_TuneCP5_13TeV_pythia8/MINIAODSIM/100X_upgrade2018_realistic_v10-v1/70000/02BC6A48-9B27-E811-9579-0CC47A7C3610.root
+
+convertFromRoot.py -i /eos/user/e/ebols/Commisioning_Ntuples_new/files.txt -o /eos/user/e/ebols/NumpyTupler -c TrainData_test
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/train_val_samples.txt -o /eos/user/e/ebols/JEC_invert_Tuples -c TrainData_deepJEC -n 8
+
+convertFromRoot.py -r
+
+convertFromRoot.py --testdatafor /data/ml/ebols/TrainingSet0p15/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_qcd_3200_Inf_10X/output/train_val_samples.txt -o /data/ml/ebols/DeepCSVHighQCD3200toInfMore -n 4
+
+convertFromRoot.py --testdatafor /eos/user/e/ebols/OutPutPutter/trainsamples.dc -i /eos/user/e/ebols/Commisioning_Ntuples_new/files2.txt -o /eos/user/e/ebols/TestTuples
+
+convertFromRoot.py --testdatafor /eos/cms/store/cmst3/group/deepjet/DeepJet_Models/DeepFlavour_2018_10X_training/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/small_test.txt -o /eos/cms/store/cmst3/group/deepjet/NumpyTuples/smaller_test
+
+predict.py /data/ml/ebols/LRPSkimDeepFlavour_NoReg_withRNN/KERAS_model.h5 /data/ml/ebols/TestTuplesTTBar10XLRPSkimNoRNNREG/dataCollection.dc /data/ml/ebols/PredictionWithRNNLRPSkim
+
+predict.py /eos/user/e/ebols/OutPutPutter/KERAS_model.h5  /eos/user/e/ebols/TestTuples/dataCollection.dc /eos/user/e/ebols/SoMuchCrap
+
+predict.py /data/ml/ebols/DeepFlavour10XLRPSkimV2CutTracks/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesQCD94X_120_170_LRPSkimV2_cuttracks/dataCollection.dc /afs/cern.ch/work/e/ebols/private/PredictionQCD_120_170_10XLRPSkimV2_cuttracks_more
+
+predict.py /data/ml/ebols/DeepFlavour10XLRPSkimV2CutTracks/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesQCD94X_3200_Inf_LRPSkimV2_cuttracks/dataCollection.dc /afs/cern.ch/work/e/ebols/private/PredictionQCD_3200_Inf_10XLRPSkimV2_cuttracks_more &> predictionQCDInf.log &
+
+predict.py /data/ml/ebols/DeepFlavour10XLRPSkimV2CutTracks/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XLRPSkimV2_cuttracks /afs/cern.ch/work/e/ebols/private/PredictionTTBar10XLRPSkimV2_cuttracks
+
+predict.py /eos/user/e/ebols/TrainingDir/KERAS_check_best_model.h5 /eos/user/e/ebols/TestTuples/dataCollection.dc /eos/user/e/ebols/Predictions
+
+predict.py /data/ml/ebols/TrainingDirNewBatch/KERAS_model.h5 /data/ml/ebols/SmallTestTuples/dataCollection.dc /data/ml/ebols/SmallPredictions
+
+predict.py /data/ml/ebols/deepCSV_P1_retrain/KERAS_check_best_model.h5 /data/ml/ebols/SmallTestTuples/dataCollection.dc /data/ml/ebols/SmallGoodPredictions
+
+predict.py /afs/cern.ch/work/e/ebols/public/NoTrackSelectionDeepCSV/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBarHad10X_DeepCSV_noTrackSelect/dataCollection.dc /afs/cern.ch/work/e/ebols/public/PredictionsDeepCSV &> PredictDeepCSV.txt &
+
+
+predict.py /afs/cern.ch/work/e/ebols/public/NoTrackSelectionDeepCSVMoreData/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBarHad10X_DeepCSV_noTrackSelect/dataCollection.dc /afs/cern.ch/work/e/ebols/public/PredictionsDeepCSVMoreStats &> PredictDeepCSVMoreStats.txt &
+
+
+
+predict.py /data/ml/ebols/Test1/KERAS_model.h5 /data/ml/ebols/DeepCSVHighQCD3200toInf/dataCollection.dc /data/ml/ebols/DeepCSV_1p00_HighQCD &> HighQCD1p00.txt &
+
+
+predict.py /data/ml/ebols/DeepFlavour10XLRPSkimV2CutTracks/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XLRPSkimV2_cuttracks /afs/cern.ch/work/e/ebols/private/PredictionTTBar10XLRPSkimV2_cuttracks
+
+predict.py /data/ml/ebols/LRPSkimV2_cuttracksv2_DF2/KERAS_model.h5 /data/ml/ebols/TestTuplesQCD94X_120_170_LRPSkimV2_cuttracks_v2/dataCollection.dc /data/ml/ebols/Prediction_QCD94X_120_170_LRPSkimV2_cuttracks_v2 &> predictQCDlowPT.log&
+
+predict.py /data/ml/ebols/LRPSkimV2_cuttracksv2_DF2/KERAS_model.h5 /data/ml/ebols/TestTuplesQCD94X_3200_Inf_LRPSkimV2_cuttracks_v2/dataCollection.dc /data/ml/ebols/Prediction_QCD94X_3200_Inf_LRPSkimV2_cuttracks_v2 &> predictQCDlHighPT.log&
+
+predict.py /data/ml/ebols/LRPSkimV2_cuttracksv2_DF2/KERAS_model.h5 /data/ml/ebols/TestTuplesTTBarLept94X_LRPSkimV2_cuttracks_v2/dataCollection.dc /data/ml/ebols/Prediction_TTBarLept94X_LRPSkimV2_cuttracks_v2 &> predictTTBarLept.log&
+
+predict.py /data/ml/ebols/TrainingSet0p02/KERAS_model.h5 /data/ml/ebols/DeepCSVHighQCD3200toInfMore/dataCollection.dc /data/ml/ebols/DeepCSV_0p02_HighQCDMore &> HighQCD0p02More.txt &
+predict.py /data/ml/ebols/TrainingSet0p15/KERAS_model.h5 /data/ml/ebols/DeepCSVHighQCD3200toInfMore/dataCollection.dc /data/ml/ebols/DeepCSV_0p15_HighQCDMore &> HighQCD0p15More.txt &
+predict.py /data/ml/ebols/TrainingSet0p15Step4/KERAS_model.h5 /data/ml/ebols/DeepCSVHighQCD3200toInfMore/dataCollection.dc /data/ml/ebols/DeepCSV_0p15_HighQCDMore2 &> HighQCD0p15More2.txt &
+predict.py /data/ml/ebols/Test1/KERAS_model.h5 /data/ml/ebols/DeepCSVHighQCD3200toInfMore/dataCollection.dc /data/ml/ebols/DeepCSV_1p00_HighQCDMore &> HighQCD1p00More.txt &
+predict.py /data/ml/ebols/Test2/KERAS_model.h5 /data/ml/ebols/DeepCSVHighQCD3200toInfMore/dataCollection.dc /data/ml/ebols/DeepCSV_1p00_HighQCDMore2 &> HighQCD1p00More2.txt &
+
+/eos/user/e/ebols/NumpyTupler
+
+
+
+
+/data/ml/ebols/SmallPredictions
+/data/ml/ebols/SmallGoodPredictions
+
+
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/filters.txt -o /afs/cern.ch/work/e/ebols/public/TrainTuples_deepFlavour_skim_puppi_less_stats -c TrainData_deepFlavour_FT_reg_noScale_skim_noPuppi -n 8
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /afs/cern.ch/work/e/ebols/public/TrainTuples_deepFlavour_skim_puppi_check -c TrainData_deepFlavour_FT_reg_noScale_skim_noPuppi -n 8
+
+
+convertFromRoot.py -r /eos/user/e/ebols/TuplesNoRegression/snapshot.dc -n 8
+
+
+convertFromRoot.py -r /data/ml/ebols/Tuples94XDeepFlavourNoLept/snapshot.dc -n 4
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/merged_v2/samples.txt -o /eos/user/e/ebols/NumpyTupler -c TrainData_deepCSV
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/test_merged/samples.txt -o /data/ml/ebols/DeepCSVRandomInput -c TrainData_deepCSV_rand -n8
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /afs/cern.ch/work/e/ebols/private/Tuples_DF_grad_skim -c TrainData_deepFlavour_FT_grad_skim -n8
+
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /afs/cern.ch/work/e/ebols/private/Tuples_DF_grad_skim -c TrainData_deepFlavour_FT_grad_skim -n8
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /eos/user/e/ebols/Tuples_DeepCSV_random_pruned -c TrainData_deepCSV_random_pruned -n8
+
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /afs/cern.ch/work/e/ebols/private/Tuples_DF_lrp_skim_v2_cuttracks -c TrainData_deepFlavour_FT_lrpatt2_cuttracks
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /eos/user/e/ebols/Tuples_DF_BTV_only -c TrainData_deepFlavour_cleanBTVOnly -n 8
+
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /data/ml/ebols/Tuples_DF_Skimmed_with_reg -c TrainData_deepFlavour_FT_reg_noScale_skim -n8
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/test_class.txt -o /afs/cern.ch/work/e/ebols/public/Tuples_DF_Skimmed_with_reg_noPuppi -c TrainData_deepFlavour_FT_reg_noScale_skim_noPuppi -n8
+
+
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /data/ml/ebols/Tuples_DF_Skimmed_with_reg_more_tracks -c TrainData_deepFlavour_FT_reg_more_tracks_noScale -n 6
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /data/ml/ebols/Tuples_DF_lrp_skim_v3 -c TrainData_deepFlavour_FT_lrpatt3 -n8
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/merged_v2/samples.txt -o /data/ml/ebols/DeepFlavourTuples -c TrainData_deepFlavour -n 4
+
+convertFromRoot.py -i /eos/user/e/ebols/Ntuples10X/merged/train_val_samples.txt -o /data/ml/ebols/Tuples10XDeepFlavour -c TrainData_deepFlavour_FT -n 4
+
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/test_class.txt -o /data/ml/ebols/DFNoRNNTestTuples -c TrainData_deepFlavour_FT -n 6
+
+convertFromRoot.py -i /eos/user/e/ebols/Ntuples10X/merged/test_class.txt -o /data/ml/ebols/Tuples10XDeepFlavour3 -c TrainData_deepFlavour_FT_reg -n 6
+
+convertFromRoot.py -i /eos/user/e/ebols/Ntuples10X/merged/test_class.txt -o /data/ml/ebols/Tuples10XDeepFlavour4 -c TrainData_fullTruth -n 6
+
+convertFromRoot.py -i /eos/user/e/ebols/Ntuples10X/merged/train_val_samples.txt -o /data/ml/ebols/Tuples10XDeepCSV -c TrainData_deepCSV -n 6
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/test_class.txt -o /data/ml/ebols/TupleCallbackTest -c TrainData_deepCSV -n 1
+
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/test_class.txt -o /data/ml/ebols/QuickTestNoRNN -c TrainData_deepCSV -n 1
+
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /afs/cern.ch/work/e/ebols/private/TuplesDFOriginal -c TrainData_deepFlavour_FT_reg_noScale -n 8
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/train_val_samples.txt -o /data/ml/ebols/TuplesNoRegression -c TrainData_deepFlavour_FT -n 8
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/train_val_samples.txt -o /data/ml/ebols/TuplesNoRegression -c TrainData_deepFlavour_FT -n 8
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/train_val_samples.txt -o /afs/cern.ch/work/e/ebols/public/GlobalSkimDFTuples -c TrainData_deepFlavour_FT_global_skim
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/train_val_samples.txt -o /data/ml/ebols/Tuples_SkimmedDeepCSV -c TrainData_deepCSV_slim -n 6
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/train_val_samples.txt -o /data/ml/ebols/Tuples10XDeepFlavourNoPuppiNoAss -c TrainData_deepFlavour_nopuppi -n 6
+
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/train_val_samples.txt -o /afs/cern.ch/work/e/ebols/private/Tuples_SkimmedMoreDeepCSV -c TrainData_deepCSV_slim_more -n 6
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/train_val_samples.txt -o /afs/cern.ch/work/e/ebols/private/Tuples_SkimmedMoreDeepCSV_v2 -c TrainData_deepCSV_slim_more_v2 -n 6
+
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/merged_noLept/smaller_samples.txt -o /data/ml/ebols/Tuples94XDeepFlavourNoLept -c TrainData_deepFlavour_FT_reg_noScale -n 6
+
+convertFromRoot.py -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/samples.txt -o /data/ml/ebols/GodHand -c TrainData_deepFlavour_FT_skim -n 6
+
+
+convertFromRoot.py -i list.txt -o /eos/user/e/ebols/NumpyTupler2 -c TrainData_deepCSV
+
+convertFromRoot.py -i /eos/user/e/ebols/Ntuples10X/merged/short_train_val.txt -o /data/ml/ebols/Tuples10XDeepCSV -c TrainData_deepCSV -n 4
+
+/eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/merged_v2/
+../../../cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/merged_v2/
+/eos/user/e/ebols
+
+
+
+
+/afs/cern.ch/work/e/ebols/private/DeepJet/DeepJet/Train/Models/deepCSV_P1_retrain
+
+python train_template.py /eos/user/e/ebols/NumpyTupler/dataCollection.dc /eos/user/e/ebols/TrainingDir
+
+python deepFlavour_noreg.py --gpu 7 /afs/cern.ch/work/e/ebols/public/SlimTest_noReg/dataCollection.dc /afs/cern.ch/work/e/ebols/public/NoRegTest/
+
+
+python deepFlavour_noRNN.py --gpu 7 /data/ml/ebols/Tuples_DF_lrp_skim/dataCollection.dc /data/ml/ebols/NoRNNandRegLRPSkimTraining &> DFtrainLRPSkimNoRnnReg.log &
+
+python deepFlavour_noRNN.py --gpu 6 /afs/cern.ch/work/e/ebols/private/Tuples_DF_grad_skim/snapshot.dc /data/ml/ebols/NoRNNandRegGradSkimTraining &> DFtrainGradSkimNoRnnReg.log &
+
+python deepFlavour_noreg.py --gpu 4 /data/ml/ebols/Tuples_DF_lrp_skim/dataCollection.dc /data/ml/ebols/LRPSkimDeepFlavour_NoReg_withRNN &> DFSkimmedTrainWithRNN.log &
+
+python deepFlavour_noreg.py --gpu 4 /afs/cern.ch/work/e/ebols/private/Tuples_DF_lrp_skim_v2_cuttracks_v2/dataCollection.dc /data/ml/ebols/LRPSkimV2_cuttracksv2_DF &> DFCutTracksV2.log &
+
+python deepFlavour_reference_sort.py --gpu 5 /afs/cern.ch/work/e/ebols/private/TuplesDFOriginal/snapshot.dc /data/ml/ebols/DeepFlavour10X_train_sorted/ &> DFtrain_sort.log &
+python deepFlavour_reference.py --gpu 7 /data/ml/ebols/Tuples10XDeepFlavour/dataCollection.dc /data/ml/ebols/DeepFlavour10Training3/ &> DFtrain3.log &
+
+python deepFlavour_FAT.py --gpu 7 /afs/cern.ch/work/e/ebols/private/TuplesDFOriginal/snapshot.dc /data/ml/ebols/DeepFlavourFat/ &> DFFAT.log &
+
+python deepFlavour_reference.py --gpu 4 /data/ml/ebols/Tuples_DF_Skimmed_with_reg/dataCollection.dc /data/ml/ebols/DeepFlavour10_skim_Training1/ &> DFtrain1.log &
+python deepFlavour_reference.py --gpu 5 /data/ml/ebols/Tuples_DF_Skimmed_with_reg/dataCollection.dc /data/ml/ebols/DeepFlavour10_skim_Training2/ &> DFtrain2.log &
+python deepFlavour_reference.py --gpu 6 /data/ml/ebols/Tuples_DF_Skimmed_with_reg/dataCollection.dc /data/ml/ebols/DeepFlavour10_skim_Training3/ &> DFtrain3.log &
+python deepFlavour_reference.py --gpu 7 /data/ml/ebols/Tuples_DF_Skimmed_with_reg/dataCollection.dc /data/ml/ebols/DeepFlavour10_skim_Training4/ &> DFtrain4.log &
+
+python deepFlavour_reference.py --gpu 6 /afs/cern.ch/work/e/ebols/public/Tuples_DF_Skimmed_with_reg_noPuppi/dataCollection.dc /data/ml/ebols/DeepFlavour10_Skim_NoPuppi/ &> DFtrainSkimNoPuppi.log &
+
+python deepFlavour_reference_Mods.py --gpu 3 /afs/cern.ch/work/e/ebols/public/TrainTuples_deepFlavour_skim_puppi_less_stats/dataCollection.dc /afs/cern.ch/work/e/ebols/public/ChangesDeepFlavour &> DFNewArch.log &
+
+
+
+python deepFlavour_reference_PermInvariant_v2.py --gpu 7 /data/ml/ebols/Tuples_DF_Skimmed_Normal_Glue_Rate/dataCollection.dc /afs/cern.ch/work/e/ebols/public/PermInvariant_big_NormalGlue &> PermInvariance_v2_NormalGlue.log &
+
+python deepFlavour_reference_PermInvariant_v2.py --gpu 7 /data/ml/ebols/Tuples_DF_MoreInput_Normal_Glue_Rate/dataCollection.dc /afs/cern.ch/work/e/ebols/public/PermInvariant_big_NormalGlue_higherLR &> PermInvariance_v2_NormalGlue_higherLR.log &
+
+python deepFlavour_reference_PermInvariant.py --gpu 7 /data/ml/ebols/Tuples_DF_Skimmed_Normal_Glue_Rate/dataCollection.dc /afs/cern.ch/work/e/ebols/public/PermInvariant_big_NormalGlue &> PermInvariance_NormalGlue.log &
+
+python deepFlavour_reference_PermInvariant.py --gpu 3 /afs/cern.ch/work/e/ebols/public/TrainTuples_deepFlavour_skim_puppi_less_stats/dataCollection.dc /afs/cern.ch/work/e/ebols/public/PermInvariant_biggerBatches &> PermInvariance_biggerBatches.log &
+
+python deepFlavour_reference_PermInvariant_v2.py --gpu 7 /afs/cern.ch/work/e/ebols/public/TrainTuples_deepFlavour_skim_puppi_less_stats/dataCollection.dc /afs/cern.ch/work/e/ebols/public/PermInvariant_DiffArch &> PermInvariance_DiffArch.log &
+
+
+python deepFlavour_reference.py --gpu 6 --datafraction 0.01 /data/ml/ebols/Tuples_DF_Skimmed_with_reg/dataCollection.dc /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p01/ &> DFtrain_frac0p01.log &
+python deepFlavour_reference.py --gpu 2 --datafraction 0.02 /data/ml/ebols/Tuples_DF_Skimmed_with_reg/dataCollection.dc /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p02/ &> DFtrain_frac0p02.log &
+python deepFlavour_reference.py --gpu 1 --datafraction 0.05 /data/ml/ebols/Tuples_DF_Skimmed_with_reg/dataCollection.dc /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p05/ &> DFtrain_frac0p05.log &
+python deepFlavour_reference.py --gpu 4 --datafraction 0.10 /data/ml/ebols/Tuples_DF_Skimmed_with_reg/dataCollection.dc /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p10/ &> DFtrain_frac0p10.log &
+python deepFlavour_reference.py --gpu 5 --datafraction 0.20 /data/ml/ebols/Tuples_DF_Skimmed_with_reg/dataCollection.dc /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p20/ &> DFtrain_frac0p20.log &
+python deepFlavour_reference.py --gpu 6 --datafraction 0.50 /data/ml/ebols/Tuples_DF_Skimmed_with_reg/dataCollection.dc /data/ml/ebols/DeepFlavour10_skim_Training4_frac0p50/ &> DFtrain_frac0p50.log &
+
+
+python deepFlavour_reference_noRNN.py --gpu 5 /afs/cern.ch/work/e/ebols/public/Tuples_DF_Skimmed_with_reg_noPuppi/dataCollection.dc /data/ml/ebols/DeepFlavour_skim_noRNNv2/
+
+python deepFlavour_reference.py --gpu 7 /data/ml/ebols/Tuples10XDeepFlavour/ /data/ml/ebols/DeepFlavour10Training2/
+
+python deepFlavour_noreg.py --gpu 7 /data/ml/ebols/Tuples_DF_lrp_skim_v2/dataCollection.dc /data/ml/ebols/DeepFlavour10XLRPSkimV2 &>DeepFlavour10XLRPSkimV2.log &
+
+
+python deepFlavour_noreg.py --gpu 7 /afs/cern.ch/work/e/ebols/private/Tuples_DF_lrp_skim_v2_cuttracks/dataCollection.dc /data/ml/ebols/DeepFlavour10XLRPSkimV2CutTracks &> DeepFlavour10XLRPSkimV2CutTracks.log &
+
+
+python deepFlavour_noRNN.py --gpu 7 /data/ml/ebols/Tuples_DF_lrp_skim_v2/dataCollection.dc /data/ml/ebols/DeepFlavour10XLRPSkimV2 &>DeepFlavour10XLRPSkimV2.log &
+
+python deepFlavour_noreg.py --gpu 5 /data/ml/ebols/Tuples_DF_lrp_skim_v3/dataCollection.dc /data/ml/ebols/DeepFlavour10XLRPSkimV3 &>DeepFlavour10XLRPSkimV3.log &
+
+python deepFlavour_noRNN.py --gpu 7 /data/ml/ebols/Tuples_DF_lrp_skim_v2/dataCollection.dc /data/ml/ebols/DeepFlavour10XLRPSkimV2 &>DeepFlavour10XLRPSkimV2.log &
+
+
+
+python deepFlavour_reference.py --gpu 5 --gpufraction 0.10 /eos/user/e/ebols/TestOf10X/dataCollection.dc /data/ml/ebols/DeepFlavourTest
+
+python deepFlavour_reference.py --gpu 5 --gpufraction 0.50 /data/ml/ebols/Tuples10XDeepFlavour2/dataCollection.dc /data/ml/ebols/DeepFlavourTest2
+
+python deepFlavour_reference.py --gpu 5 --gpufraction 0.50 /data/ml/ebols/Tuples10XDeepFlavour3/dataCollection.dc /data/ml/ebols/DeepFlavourTest3
+
+python deepFlavour_reference.py --gpu 5 /afs/cern.ch/work/e/ebols/private/TuplesDFOriginal/dataCollection.dc /data/ml/ebols/DeepFlavourTest &> howmany.log &
+
+python deepFlavour_reference.py --gpu 5 --gpufraction 0.50 /data/ml/ebols/Tuples10XDFMapReg/dataCollection.dc /data/ml/ebols/DeepFlavourTestDFMapReg
+
+python deepFlavour_reference.py --gpu 7 --gpufraction 0.50 /data/ml/ebols/Tuples10XDeepFlavour/dataCollection.dc /data/ml/ebols/DeepFlavour10TrainingCorrect &> DeepFlavour10X.log &
+
+python deepFlavour_reference.py --gpu 6 /data/ml/ebols/Tuples94XDeepFlavourNoLept/snapshot.dc /data/ml/ebols/DeepFlavour94XNoLept &> DeepFlavour94XNoLept.log &
+
+
+python train_DeepCSV.py --gpu 6 /data/ml/ebols/Tuples10XDeepCSV/snapshot.dc /data/ml/ebols/DeepCSV10XTraining &> DeepCSV10X.log &
+
+python train_DeepCSV.py --gpu 6 /data/ml/ebols/Tuples_DeepCSVRandomInput/dataCollection.dc /data/ml/ebols/DeepCSV_random_Training &> DeepCSVrand.log &
+
+0.1% 0.3% 1% 3% 10% 30%
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.001 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p001 &> log0p001.log &
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.003 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p003 &> log0p003.log &
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.01 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p01 &> log0p01.log &
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.03 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p03 &> log0p03.log &
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.10 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p10 &> log0p10.log &
+python train_DeepCSV.py --gpu 3 --gpufraction 0.20 --datafraction 0.30 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p30 &> log0p30.log &
+
+python train_DeepCSV.py --gpu 2 --gpufraction 0.20 /afs/cern.ch/work/e/ebols/public/TrainTuples_deepCSV_noTrackSelect_remade/dataCollection.dc /afs/cern.ch/work/e/ebols/public/NoTrackSelectionDeepCSV &> NoSelect.log &
+
+python train_DeepCSV.py --gpu 5 /eos/user/e/ebols/TrainTuples_deepCSV_noTrackSelect/dataCollection.dc /data/ml/ebols/DeepCSVwithoutTrackSelect &> Issues.log &
+
+python train_DeepCSV.py --gpu 3 --gpufraction 0.20 /data/ml/ebols/TupleCallbackTest/dataCollection.dc /data/ml/ebols/callbacktest
+
+python train_DeepCSVsmall.py --gpu 4 --gpufraction 0.20 --datafraction 0.02 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p02dropout &> log0p02dropout.log &
+python train_DeepCSVsmall.py --gpu 4 --gpufraction 0.20 --datafraction 0.02 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p02dropout0p05 &> log0p02dropout0p05.log &
+python train_DeepCSVsmall.py --gpu 4 --gpufraction 0.20 --datafraction 0.02 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p02learnmin &> log0p02learnmin.log &
+python train_DeepCSVsmall.py --gpu 4 --gpufraction 0.20 --datafraction 0.02 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p02learnminfixpat &> log0p02learnminfixpat.log &
+python train_DeepCSVsmall.py --gpu 4 --gpufraction 0.20 --datafraction 0.02 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p02Hypers &> log0p02Hypers.log &
+
+
+python deepFlavour_noreg.py --gpu 6 /data/ml/ebols/TuplesNoRegression/dataCollection.dc /data/ml/ebols/NoRegDeepFlavour
+
+python train_DeepCSV.py --gpu 7 /data/ml/ebols/Tuples_SkimmedDeepCSV/dataCollection.dc /data/ml/ebols/SkimmedDeepCSVTraining &> SkimmedTraining.log &
+ &> prediction.log &
+python train_DeepCSV.py --gpu 7 /afs/cern.ch/work/e/ebols/private/Tuples_SkimmedMoreDeepCSV_v2/dataCollection.dc /data/ml/ebols/MoreSkimmedDeepCSVTraining_v2 &> MoreSkimmedTraining_v2.log &
+
+
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step1 &> log0p15Step1.log &
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step2 &> log0p15Step2.log &
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step3 &> log0p15Step3.log &
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step4 &> log0p15Step4.log &
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step5 &> log0p15Step5.log &
+python train_DeepCSV.py --gpu 5 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step6 &> log0p15Step6.log &
+
+python train_DeepCSV.py --gpu 6 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step7 &> log0p15Step7.log &
+python train_DeepCSV.py --gpu 6 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step8 &> log0p15Step8.log &
+python train_DeepCSV.py --gpu 6 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step9 &> log0p15Step9.log &
+python train_DeepCSV.py --gpu 6 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step10 &> log0p15Step10.log &
+python train_DeepCSV.py --gpu 6 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step11 &> log0p15Step11.log &
+python train_DeepCSV.py --gpu 6 --gpufraction 0.10 --datafraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingSet0p15Step12 &> log0p15Step12.log &
+
+
+
+python train_DeepCSV.py --gpu 7 --gpufraction 0.25 /data/ml/ebols/Tuples10XDeepCSV/dataCollection.dc /data/ml/ebols/DeepCSV10XAgain &> DeepCSVagain.log &
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepCSV10XTraining/trainsamples.dc -i /eos/user/e/ebols/Ntuples10X/merged/short_test_samples.txt -o /eos/user/e/ebols/TestTuples10X -n 4
+
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepCSV10XTraining/trainsamples.dc -i /eos/user/e/ebols/Ntuples10X/merged/short_test_samples.txt -o /eos/user/e/ebols/TestTuples10X -n 4
+
+
+convertFromRoot.py --testdatafor /data/ml/ebols/NoRNNandRegLRPSkimTraining/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/TestTuplesTTBar10XLRPSkimNoRNNREG -n 4
+
+convertFromRoot.py /eos/user/e/ebols/Phase0/Thu_160541_TuplesPhase0/ttbar_8X/output
+
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepCSV_random_pruned_training/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/RandomPruned_Test_tuples -n 4
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepCSV_random_pruned_training/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/RandomPruned_Test_tuples -n 4
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepCSV_gradient_pruned_training/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/GradientPruned_Test_tuples -n 4
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/DeepFlavour10_skim_Training1/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XDeepFlavour_final_skim -n 8
+
+
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/PermInvariant_big_balanced/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuples_ttHAD_permInv_bigger -n 8
+
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/DeepCSVModel/KERAS_model.h5 -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/small_test.txt -o /eos/cms/store/cmst3/group/deepjet/NumpyTuples/DeepCSV/RawDCTTBar -n 4
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/DeepCSVModel/KERAS_model.h5 -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/merged/test_class.txt -o /eos/cms/store/cmst3/group/deepjet/NumpyTuples/DeepCSV -n 4
+
+convertFromRoot.py --testdatafor /data/ml/ebols/NoRNNandRegTraining/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/TestTuplesNoReg_TTBarHad -n 4
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/trainsamples.dc -i /eos/user/e/ebols/8XTuplesQCD/Tue_171850_8XSamples/qcd_120_170_8x/output/files.txt -o /eos/user/e/ebols/8XTuplesQCD/Tue_171850_8XSamples/qcd_120_170_8x/TestTuples_Phase1_Skim/ -n8 &> out1.txt &
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/private/DeepJet/DeepJet/Train/Models/DeepJet_CMSSW_PR_Jul17/trainsamples.dc -i /eos/user/e/ebols/8XTuplesQCD/Tue_171850_8XSamples/qcd_120_170_8x/output/files.txt -o /eos/user/e/ebols/8XTuplesQCD/Tue_171850_8XSamples/qcd_120_170_8x/TestTuples_Phase0_v2/ -n 8 
+
+
+predict.py /afs/cern.ch/work/e/ebols/private/DeepJet/DeepJet/Train/Models/DeepJet_CMSSW_PR_Jul17/KERAS_model.h5 /eos/user/e/ebols/8XTuplesQCD/Tue_171850_8XSamples/qcd_120_170_8x/TestTuples_Phase0/snapshot.dc /eos/user/e/ebols/8XTuplesQCD/Tue_171850_8XSamples/qcd_120_170_8x/PredictPhase0_QCD120to170 &> predictDeepFlavourFull8X.log &
+
+predict.py /afs/cern.ch/work/e/ebols/public/DeepFlavour10_Skim_NoPuppi/KERAS_model.h5 /eos/user/e/ebols/8XTuplesQCD/Tue_171850_8XSamples/qcd_120_170_8x/TestTuples_Phase1_Skim/snapshot.dc /eos/user/e/ebols/8XTuplesQCD/Tue_171850_8XSamples/qcd_120_170_8x/PredictPhase1_QCD120to170 &> predictDeepFlavourPhase1.log &
+
+
+/eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_qcd_3200_Inf_10X/output/test_samples.txt
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/PermInvariant_NormalGlue_moreTracks/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_qcd_3200_Inf_10X/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuples_QCD3200_PermInvMoreTracks -n 4
+
+
+convertFromRoot.py --testdatafor /afs/cern.ch/work/e/ebols/public/PermInvariant_NormalGlue_moreTracks/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuples_TTBarHad_PermInvMoreTracks -n 4
+
+convertFromRoot.py --testdatafor /eos/cms/store/cmst3/group/dehep/DeepJet/DF_2016Boost/trainsamples.dc -i /eos/user/e/ebols/Phase0/Thu_160541_TuplesPhase0/ttbar_8X/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestTuples8x -n 6
+
+
+
+/data/ml/ebols/Skimmed_DeepFlavour/KERAS_check_model_epoch26.h5
+
+predict.py /data/ml/ebols/DeepFlavour_skim_noRNN/KERAS_check_model_epoch50.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTHad10X__Skim_NoPuppi/dataCollection.dc /data/ml/ebols/PredictionDeepFlavourNoRNNTTBar &> predictSkimDeepFlavour.log &
+
+predict.py /data/ml/ebols/DeepFlavour_1p5MilPara/should_igetexcited.h5 /data/ml/ebols/TestTuples_TTBarHad_Standard_DF/dataCollection.dc /data/ml/ebols/PredictionFatDeepFlavourEPOCH1 &> predictFatDFepoch1.log &
+
+predict.py /data/ml/ebols/DeepFlavour_1p5MilPara/should_igetexcited.h5 /data/ml/ebols/TestTuples_TTBarHad_Standard_DF/dataCollection.dc /data/ml/ebols/PredictionFatDeepFlavourEPOCH1 &> predictFatDFepoch1.log &
+
+predict.py /data/ml/ebols/Skimmed_DeepFlavour/KERAS_model.h5 /data/ml/ebols/TestTuplesSkimmed_TTBarHad/dataCollection.dc /data/ml/ebols/PredictionDeepFlavourSkimTTBar &> predictSkimDeepFlavourFull.log &
+
+predict.py /data/ml/ebols/DeepFlavour10XLRPSkimV2/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTBar10XLRPSkimV2/dataCollection.dc /afs/cern.ch/work/e/ebols/private/PredictionLRPSkimV2DeepFlavour10XTTbar &> predictDeepFlavourV2SkimLRP.log &
+
+predict.py /data/ml/ebols/DeepFlavour10X_train_sorted/KERAS_model.h5 /data/ml/ebols/TestTuples_TTBarHad_Standard_DF/dataCollection.dc /data/ml/ebols/PredictionDF_sorted_10X_ttbarHad &> predictDeepFlavourSort.log &
+
+predict.py /data/ml/ebols/LRPSkimV2_cuttracksv2_DF2/KERAS_model.h5 /data/ml/ebols/TestTTBar10X_cuttracksv2_DF2/dataCollection.dc /afs/cern.ch/work/e/ebols/private/PredictionLRPSkimV2_cuttracksv2_DeepFlavour10XTTbar &> predictDeepFlavourV2tracksV2SkimLRP.log &
+
+convertFromRoot.py --testdatafor /data/ml/ebols/Training10XNoAssNoPuppi/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/TTBartestNoAss -n 4
+
+convertFromRoot.py --testdatafor /eos/cms/store/cmst3/group/deepjet/DeepJet_Models/DeepFlavour_2018_10X_training/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/small_test.txt -o /eos/cms/store/cmst3/group/deepjet/NumpyTuples/DeepFlavour_ttBAR -n 4
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepFlavour10TrainingCorrect/trainsamples.dc -i /eos/user/e/ebols/Ntuples10X/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/TestDeepFlavourTTBar10X -n 4
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepFlavour10TrainingCorrect/trainsamples.dc -i /eos/user/e/ebols/Ntuples10X/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/TestDeepFlavourTTBar10X -n 4
+
+
+
+
+convertFromRoot.py --testdatafor /afs/cern.ch/user/e/ebols/DeepFlavour10_skim_Training1/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_ttbarHad10X -n 8
+
+convertFromRoot.py --testdatafor /afs/cern.ch/user/e/ebols/DeepFlavour10_skim_Training1/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_qcd_120_170_10X/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_QCD120to17010X -n 8
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepFlavour10_skim_Training1/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_qcd_3200_Inf_10X/output/test_samples.txt -o /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_QCD3200toInf10X -n 8
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepFlavour94XTraining/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/TestOldDeepFlavourTTBar10X -n 4
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepFlavour94XTraining/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/TestOldDeepFlavourTTBar10X -n 4
+
+
+TrainData_deepFlavour_cleanBTVOnly
+
+
+convertFromRoot.py --testdatafor /data/ml/ebols/LRPSkimV2_cuttracksv2_DF2/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/TestTTBar10X_cuttracksv2_DF2 -n 8
+
+predict.py /data/ml/ebols/DeepCSV10XAgain/KERAS_model.h5 /data/ml/ebols/TestTuplesTTBar10X/dataCollection.dc /data/ml/ebols/Prediction10XDeepCSVTTBar &> predict10XDeepCSVTTbar.log &
+
+python train_DeepCSV.py /data/ml/mverzett/for_emil/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingDirNewBatch
+
+python train_DeepCSV.py --gpu 3 --gpufraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingDirTest
+
+python train_DeepCSV.py --gpu 3 --gpufraction 0.15 /data/ml/ebols/NumpyTupler/snapshot.dc /data/ml/ebols/TrainingDirTest &> train1.log &
+
+python train_DeepCSV.py --gpu 5 --gpufraction 0.5 /data/ml/ebols/Tuples10XDeepFlavour/dataCollection.dc /data/ml/ebols/DeepFlavour10X &> DeepFlav.log &
+
+python train_DeepCSV.py --gpu 5 --gpufraction 0.5 /data/ml/ebols/Tuples10XDeepFlavour2/dataCollection.dc /data/ml/ebols/DeepFlavour10X &> DeepFlav.log &
+n_
+python train_DeepCSV.py --gpu 1 /data/ml/ebols/Tuples_DeepCSV_random_pruned/dataCollection.dc /data/ml/ebols/DeepCSV_random_pruned_training/ &> DeepCSV_random_pruned.log &
+
+convertFromRoot.py --testdatafor /eos/user/e/ebols/TrainingDir/trainsamples.dc -i /eos/user/e/ebols/reallyshort4.txt -o /eos/user/e/ebols/TestTuples -n 4
+
+convertFromRoot.py --testdatafor /data/ml/ebols/TrainingDirNewBatch/trainsamples.dc -i /eos/user/e/ebols/megashort.txt -o /data/ml/ebols/SmallTestTuples -n 4
+
+convertFromRoot.py --testdatafor /data/ml/ebols/deepCSV_P1_retrain/trainData.dc -i /eos/user/e/ebols/megashort.txt -o /data/ml/ebols/SmallTestTuplesGoodTrain -n 4
+
+convertFromRoot.py --testdatafor /data/ml/ebols/deepCSV_P1_retrain/trainData.dc -i /eos/user/e/ebols/megashort.txt -o /data/ml/ebols/SmallTestTuplesGoodTrain -n 4
+
+convertFromRoot.py --testdatafor /data/ml/ebols/deepCSV_P1_retrain/trainData.dc -i /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/ntuple_ttbarHad_phase1/output/test_samples.txt -o /data/ml/ebols/TestTTBar -n 4
+
+
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepCSVTrainingSmaller/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/Test_DeepCSVProperSkim -n 6
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepCSVTrainingSmaller/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/Test_DeepCSVProperSkim -n 6
+
+convertFromRoot.py --testdatafor /eos/cms/store/cmst3/group/deepjet/DeepJet_Models/DeepFlavour_2018_10X_training/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/small_test.txt -o /eos/cms/store/cmst3/group/deepjet/NumpyTuples/small_test
+
+convertFromRoot.py --testdatafor /eos/cms/store/cmst3/group/deepjet/DeepJet_Models/DeepFlavour_2018_10X_training/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/small_test.txt -o /eos/cms/store/cmst3/group/deepjet/NumpyTuples/small_test
+
+convertFromRoot.py --testdatafor /eos/cms/store/cmst3/group/deepjet/DeepJet_Models/DeepFlavour_2018_10X_training/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/small_test.txt -o /eos/cms/store/cmst3/group/deepjet/NumpyTuples/small_test
+
+convertFromRoot.py --testdatafor /data/ml/ebols/MoreSkimmedDeepCSVTraining/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_ttbar_had_10X/output/test_samples.txt -o /data/ml/ebols/MoreSkimmedTestTuples -n 6
+
+
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepCSV_random_pruned_training/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/ntuple_ttbarHad_phase1/output/test_samples.txt -o /data/ml/ebols/Test_DeepCSV_random_pruned -n 1
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepFlavour10TrainingCorrect/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/ntuple_qcd_120_170_Fall17/output/test_samples.txt -o /data/ml/ebols/TestQCD -n 4
+
+
+
+convertFromRoot.py --testdatafor /data/ml/ebols/DeepFlavour10TrainingCorrect/trainsamples.dc -i /eos/cms/store/cmst3/group/deepjet/DF2018_10XNtuples/ntuple_qcd_120_170_10X/output/test_samples.txt -o /data/ml/ebols/TestQCD10X -n 4
+
+
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training1/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_ttbarLept94X/dataCollection.dc /afs/cern.ch/work/e/ebols/private/DF_pruned_Predict10XTTBarLept
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training1/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_ttbarHad10X/dataCollection.dc /afs/cern.ch/work/e/ebols/private/DF_pruned_Predict10XTTBarHad
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training1/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_QCD3200toInf10X/dataCollection.dc /afs/cern.ch/work/e/ebols/private/DF_pruned_Predict10XQCD3200toInf
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training1/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_QCD120to17010X/dataCollection.dc /afs/cern.ch/work/e/ebols/private/DF_pruned_Predict10XQCD120to170 &> QCD_120_170_pruned.log &
+
+
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training2/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_ttbarLept94X/dataCollection.dc /afs/cern.ch/work/e/ebols/private/DF2_pruned_Predict10XTTBarLept &> lal1.txt &
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training2/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_ttbarHad10X/dataCollection.dc /afs/cern.ch/work/e/ebols/private/DF2_pruned_Predict10XTTBarHad &> lal2.txt &
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training2/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_QCD3200toInf10X/dataCollection.dc /afs/cern.ch/work/e/ebols/private/DF2_pruned_Predict10XQCD3200toInf &> lal3.txt &
+
+predict.py /afs/cern.ch/user/e/ebols/DeepFlavour10_skim_Training2/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestDeepFlavour_pruned_QCD120to17010X/dataCollection.dc /afs/cern.ch/work/e/ebols/private/DF2_pruned_Predict10XQCD120to170 &> lal4.txt &
+
+
+
+predict.py /data/ml/ebols/DeepFlavour10_skim_Training1/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuples8x_newTrain/snapshot.dc /eos/user/e/ebols/Phase0/10XTrainingPredict
+
+predict.py /eos/cms/store/cmst3/group/deepjet/DeepJet_Models/DF_2016Boost/KERAS_model.h5 /afs/cern.ch/work/e/ebols/private/TestTuples8x_newTrain/snapshot.dc /eos/user/e/ebols/Phase0/8XTrainingPredict
+
+predict.py /data/ml/ebols/DeepFlavour94XNoLept/KERAS_model.h5 /data/ml/ebols/TestDeepFlavourTTBar10X/dataCollection.dc /data/ml/ebols/PredictionDeepFlavour94XnoLeptOn10X &> NoLept94Xon10XPrediction.log &
+
+
+predict.py /data/ml/ebols/DeepFlavour94XNoLept/KERAS_model.h5 /data/ml/ebols/TestDeepFlavourTTBar10X/dataCollection.dc /data/ml/ebols/PredictionDeepFlavour94XnoLeptOn10X &> NoLept94Xon10XPrediction.log &
+
+predict.py /data/ml/ebols/DeepFlavour10Training2/KERAS_model.h5 /data/ml/ebols/TestDeepFlavourTTBar10X/dataCollection.dc /data/ml/ebols/PredictionDeepFlavour210XTTBar
+predict.py /data/ml/ebols/DeepFlavour10Training2/KERAS_model.h5 /data/ml/ebols/TestDeepFlavourTTBar10X/dataCollection.dc /data/ml/ebols/PredictionDeepFlavour210XTTBar
+predict.py /data/ml/ebols/DeepFlavour10Training2/KERAS_model.h5 /data/ml/ebols/HighPTtest/dataCollection.dc /data/ml/ebols/PredictionQCDHighPt210Xon10X
+
+predict.py /data/ml/ebols/DeepCSV_random_pruned_training/KERAS_model.h5 /data/ml/ebols/Test_DeepCSV_random_pruned/dataCollection.dc /data/ml/ebols/Prediction_DeepCSV_random_pruned
+
+predict.py  /data/ml/ebols/TrainingSet0p005/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p005 &> predict0p005.log &
+predict.py /data/ml/ebols/TrainingSet0p01/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p01 &> predict0p01.log &
+predict.py /data/ml/ebols/TrainingSet0p02/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p02 &> predict0p02.log &
+predict.py /data/ml/ebols/TrainingSet0p03/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p03 &> predict0p03.log &
+predict.py /data/ml/ebols/TrainingSet0p05/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p05 &> predict0p05.log &
+predict.py /data/ml/ebols/TrainingSet0p10/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p10 &> predict0p10.log &
+predict.py /data/ml/ebols/TrainingSet0p15/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15 &> predict0p15.log &
+predict.py /data/ml/ebols/TrainingSet0p20/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p20 &> predict0p20.log &
+predict.py /data/ml/ebols/TrainingSet0p30/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p30 &> predict0p30.log &
+///////////////////////////////////////////////////////////////////////////777
+predict.py /data/ml/ebols/TrainingSet0p50/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p50 &> predict0p50.log &
+predict.py /data/ml/ebols/TrainingSet0p75/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p75 &> predict0p75.log &
+
+predict.py /data/ml/ebols/TrainingDirNewBatch/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction10XTTBar
+
+predict.py /data/ml/ebols/Test1/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/PredictionTest1
+
+predict.py /data/ml/ebols/TrainingSet0p02dropout0p05/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p02dropout &> predict0p02dropout.log &
+
+predict.py /afs/cern.ch/work/e/ebols/public/PermInvariant_biggerBatches/KERAS_check_model_epoch26.h5 /afs/cern.ch/work/e/ebols/private/TestTuplesTTHad10X__Skim_NoPuppi/dataCollection.dc /afs/cern.ch/work/e/ebols/private/PredictAttempt1ofPerm &> PredictAttempt1.log &
+
+
+jobSub.py --outpath /eos/user/e/ebols/Phase2Ntuples --file samples_phase2.cfg DeepNtuplizer.py output
+
+
+/store/mc/PhaseIITDRFall17MiniAOD/TT_TuneCUETP8M2T4_14TeV-powheg-pythia8/MINIAODSIM/PU200_93X_upgrade2023_realistic_v2-v3/00000/D88E3367-58C1-E711-BA11-0CC47A5450FA.root
+
+/eos/cms/store/mc/PhaseIITDRFall17MiniAOD/TT_TuneCUETP8M2T4_14TeV-powheg-pythia8/MINIAODSIM/PU200_93X_upgrade2023_realistic_v2_ext1-v1/30000/F46F60B0-E7C8-E711-8034-003048FF273A.root
+
+emacs -nw ntuple1_ttbar_phase2/batch/con_out.246.out
+
+
+predict.py /data/ml/ebols/TrainingSet0p15Step11/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step11 &> predict0p15Step11.log &
+wait $! &
+predict.py /data/ml/ebols/TrainingSet0p15Step12/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step12 &> predict0p15Step12.log &
+
+
+/store/mc/RunIISpring18MiniAOD/QCD_Pt_50to80_TuneCP5_13TeV_pythia8/MINIAODSIM/100X_upgrade2018_realistic_v10-v1/70000/C6B792E6-582F-E811-A434-FA163E40B602.root
+
+predict.py /data/ml/ebols/TrainingSet0p15Step1/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step1 &> predict0p15Step1.log &
+predict.py /data/ml/ebols/TrainingSet0p15Step2/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step2 &> predict0p15Step2.log &
+
+predict.py /data/ml/ebols/TrainingSet0p15Step3/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step3 &> predict0p15Step3.log &
+predict.py /data/ml/ebols/TrainingSet0p15Step4/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step4 &> predict0p15Step4.log &
+predict.py /data/ml/ebols/TrainingSet0p15Step5/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step5 &> predict0p15Step5.log &
+predict.py /data/ml/ebols/TrainingSet0p15Step6/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step6 &> predict0p15Step6.log &
+predict.py /data/ml/ebols/TrainingSet0p15Step7/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step7 &> predict0p15Step7.log &
+predict.py /data/ml/ebols/TrainingSet0p15Step8/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step8 &> predict0p15Step8.log &
+predict.py /data/ml/ebols/TrainingSet0p15Step9/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step9 &> predict0p15Step9.log &
+predict.py /data/ml/ebols/TrainingSet0p15Step10/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step10 &> predict0p15Step10.log &
+predict.py /data/ml/ebols/TrainingSet0p15Step11/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step11 &> predict0p15Step11.log &
+predict.py /data/ml/ebols/TrainingSet0p15Step12/KERAS_model.h5 /data/ml/ebols/TestTTBar/dataCollection.dc /data/ml/ebols/Prediction0p15Step12 &> predict0p15Step12.log &
+
+
+predict.py /data/ml/ebols/DeepFlavour10TrainingCorrect/KERAS_model.h5 /data/ml/ebols/TestQCD/dataCollection.dc /data/ml/ebols/PredictionQCD10Xon94X &> predictQCD.log &
+predict.py /data/ml/ebols/DeepFlavour94XTraining/KERAS_model.h5 /data/ml/ebols/TestQCD/dataCollection.dc /data/ml/ebols/PredictionQCD94Xon94X &> predictQCD2.log &
+
+predict.py /data/ml/ebols/DeepFlavour94XTraining/KERAS_model.h5 /data/ml/ebols/HighPTtest/dataCollection.dc /data/ml/ebols/PredictionQCDHighPt94Xon10X &> predictQCD2.log &
+
+
+predict.py /data/ml/ebols/DeepFlavour10TrainingCorrect/KERAS_model.h5 /data/ml/ebols/HighPTtest/dataCollection.dc /data/ml/ebols/PredictionQCDHighPt10Xon10X &> predictQCDpt1.log &
+predict.py /data/ml/ebols/DeepFlavour94XTraining/KERAS_model.h5 /data/ml/ebols//data/ml/ebols/HighPTtest/dataCollection.dc /data/ml/ebols/PredictionQCDHighPt94Xon10X &> predictQCDpt2.log &
+
+-set-gpu-frac 16%
+
+predict.py /data/ml/ebols/TrainingSet0p30/KERAS_model.h5 /data/ml/ebols/SmallTestTuples/dataCollection.dc /data/ml/ebols/PredictionOldTrainingOnMerge &> predictiontest.log &
+
+MERGER
+
+mergeSamples.py 400000 merged ntuple_*/output/train_val_samples.txt
+mergeSamples.py 400000 /eos/user/e/ebols/Ntuples10X/merged/ /eos/user/e/ebols/Ntuples10X/ntuple_ttbar*/output/train_val_samples.txt /eos/user/e/ebols/Ntuples10X/ntuple_qcd*/output/train_val_samples.txt --batch
+mergeSamples.py 400000 /eos/user/e/ebols/merged94XnoLept/ /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/ntuple_ttbarHad_phase1/output/train_val_samples.txt /eos/cms/store/cmst3/group/deepjet/NTuples/Fri_134455_Fall17Try7/ntuple_qcd*/output/train_val_samples.txt --batch
+

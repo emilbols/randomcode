@@ -1,0 +1,23 @@
+In case your program got interupted you can resume using the command -r and the path to the snapshot.
+
+
+change:
+
+sed -i 's|deepFlavourJetTags|pfDeepCSVJetTags|g' DeepNTuples/DeepNtuplizer/production/DeepNtuplizer.py
+
+to
+
+sed -i 's|deepFlavourJetTags|pfDeepCSVJetTags|g' DeepNtuplizer/production/DeepNtuplizer.py
+
+
+change:
+
+check.py uses / in the directory name...
+
+write that this jobsub is in production.
+
+
+change batch size for gpus:
+5000 -> 10000
+
+make roc curves, for this you have to change a bunch of the isUDSG flags to isUD, isG, isS

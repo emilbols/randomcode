@@ -1,0 +1,7 @@
+lxplus107
+lxplus085
+lxplus133
+lxplus083
+lxplus727
+
+python deepFlavour_reference_PermInvariant.py --gpu 5 /data/ml/ebols/Tuples_DF_MoreInput_Normal_Glue_Rate/dataCollection.dc /afs/cern.ch/work/e/ebols/public/PermInvariant_deeper_NormalGlue &>PermInvariance_deeper_NormalGlue.log &

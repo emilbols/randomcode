@@ -1,0 +1,11 @@
+Gradual change:
+
+DeepCSV
+DeepCSV No track selection
+DeepCSV No track selection more tracks,
+DeepCSV No track selection more tracks + RNN
+DeepFlavour No Conv
+DeepFlavour with Conv
+DeepFlavour No memory
+
+

@@ -1,0 +1,9 @@
+finish numpy ntuple production
+
+figure out how many trainings you can fit on one gpu
+
+Check how much the random initialization affects finding the minimum the roc curve.
+
+Try to do the training using different dataset sizes.
+
+Plot the error on the ROC as a function of dataset size and the final loss as a function of dataset size.

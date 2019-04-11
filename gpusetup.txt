@@ -1,0 +1,4 @@
+ssh cmg-gpu1080
+kinit ebols@CERN.CH
+aklog
+source .bashrc
